@@ -1,0 +1,281 @@
+/* ----------------------------------------------------- start variables */
+:root {
+  --main_color: #d4af37;
+  --body_color: #1e1e1e;
+  --body2_color: #333333;
+  --body3_color: #2a2b31;
+}
+@font-face {
+  font-family: "DIN Next Arabic ULTRALIGHT";
+  src: url(../fonts/DIN_NEXT_ARABIC_ULTRALIGHT.otf);
+}
+@font-face {
+  font-family: "DIN Next Arabic LIGHT";
+  src: url(../fonts/DIN_NEXT_ARABIC_LIGHT.otf);
+}
+@font-face {
+  font-family: "DIN Next Arabic MEDIUM";
+  src: url(../fonts/DIN_NEXT_ARABIC_MEDIUM.otf);
+}
+
+@font-face {
+  font-family: "DIN Next Arabic regular";
+  src: url(../fonts/DIN_NEXT_ARABIC_REGULAR.otf);
+}
+@font-face {
+  font-family: "DIN Next Arabic BOLD";
+  src: url(../fonts/DIN_NEXT_ARABIC_BOLD.otf);
+}
+@keyframes moving1 {
+  0% {
+    bottom: 70%;
+    right: -10%;
+  }
+  100% {
+    bottom: -15%;
+    right: 40%;
+  }
+}
+@keyframes moving2 {
+  0% {
+    top: -10%;
+    right: 40%;
+  }
+  100% {
+    top: 110%;
+    right: 100%;
+  }
+}
+/* ----------------------------------------------------- end variables */
+/* -------------------------------------------------start stander */
+*,
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "DIN Next Arabic regular";
+}
+body {
+  position: relative;
+  overflow-x: auto;
+  background-color: #f8fafb;
+}
+body.arabic {
+  direction: rtl;
+  text-align: right;
+}
+.arabic * {
+  text-align: right;
+}
+input {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--body_color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37a6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main_color);
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.ConfirmEmail {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.ConfirmEmail .outerImgs .bigImg {
+  position: absolute;
+  top: -31%;
+  right: -8%;
+  z-index: -1;
+}
+.ConfirmEmail .ConfirmEmailForm {
+  width: 35%;
+  background-color: #fff;
+  padding: 4rem 5% 1.5rem;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.03),
+    -5px -5px 12px rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
+}
+.ConfirmEmail .smallImg1 {
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-40deg);
+  animation: moving1 11s 1s ease-in-out infinite;
+}
+.ConfirmEmail .smallImg2 {
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-40deg);
+  animation: moving2 8s ease-in-out infinite;
+}
+.ConfirmEmail .ConfirmEmailForm > p {
+  text-align: center;
+}
+.ConfirmEmail .ConfirmEmailForm > p:first-of-type {
+  font-size: 34px;
+  text-transform: uppercase;
+}
+.ConfirmEmail .ConfirmEmailForm > p:last-of-type {
+  color: #778ca2;
+  font-size: 1.1rem;
+}
+.ConfirmEmail .ConfirmEmailForm > p:last-of-type a {
+  color: #4d7cfe;
+}
+
+.ConfirmEmail .ConfirmEmailForm .input {
+  margin-bottom: 1.5rem;
+}
+.ConfirmEmail .ConfirmEmailForm .input > label {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+.ConfirmEmail .ConfirmEmailForm .input > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ConfirmEmail .ConfirmEmailForm .input > div > input {
+  padding: 0.8rem;
+  border: 1px solid #e8ecef;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  width: 15%;
+}
+.ConfirmEmail .ConfirmEmailForm .input > div > img {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+.ConfirmEmail .ConfirmEmailForm .btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+.ConfirmEmail .ConfirmEmailForm .btns button {
+  background-color: #f8fafb;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+}
+.ConfirmEmail .ConfirmEmailForm .btns button:last-of-type {
+  background-color: var(--main_color);
+  color: #fff;
+}
+@media (max-width: 1550px) {
+  .ConfirmEmail .outerImgs .bigImg {
+    top: -41%;
+    right: -20%;
+  }
+  .ConfirmEmail .ConfirmEmailForm {
+    width: 40%;
+    padding: 2rem 3% 1rem;
+    margin: 2rem 0;
+  }
+
+  .ConfirmEmail .ConfirmEmailForm > p:first-of-type {
+    font-size: 25px;
+  }
+  .ConfirmEmail .ConfirmEmailForm > p:last-of-type {
+    font-size: 13px;
+  }
+  .ConfirmEmail .ConfirmEmailForm .input {
+    margin-bottom: 1rem;
+  }
+  .ConfirmEmail .ConfirmEmailForm .input > label {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+  .ConfirmEmail .ConfirmEmailForm .input > div {
+    padding: 0.3rem;
+  }
+  .ConfirmEmail .ConfirmEmailForm .input > div > input {
+    font-size: 0.9rem;
+  }
+  .ConfirmEmail .ConfirmEmailForm .btns button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    overflow: hidden;
+  }
+  .ConfirmEmail .outerImgs .bigImg {
+    right: -30%;
+  }
+  .ConfirmEmail .ConfirmEmailForm {
+    width: 65%;
+  }
+
+  .ConfirmEmail .ConfirmEmailForm > p:first-of-type {
+    font-size: 26px;
+  }
+  .ConfirmEmail .ConfirmEmailForm > p:last-of-type {
+    font-size: 14px;
+  }
+
+  .ConfirmEmail .ConfirmEmailForm .input.phone > div > div:first-of-type {
+    width: 40%;
+  }
+
+  .ConfirmEmail .ConfirmEmailForm .input.phone > div > div:last-of-type {
+    width: 57%;
+  }
+
+  .ConfirmEmail .ConfirmEmailForm > a {
+    font-size: 1rem;
+  }
+  .ConfirmEmail .ConfirmEmailForm .GoConfirmEmail > p {
+    font-size: 0.8rem;
+  }
+
+  .ConfirmEmail .ConfirmEmailForm .GoConfirmEmail > div a {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    overflow: scroll;
+  }
+  .ConfirmEmail {
+    margin: 3rem 0;
+  }
+  .ConfirmEmail .outerImgs .bigImg {
+    right: -30%;
+  }
+  .ConfirmEmail .ConfirmEmailForm {
+    width: 95%;
+  }
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TOP 10,000 TURKEY</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width , initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="project" />
+    <!-- Link bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Link style CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <!-- link animate css library -->
+    <link href="./css/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a href="#topScreen" class="toTop hide">
+      <img src="./imges/ToTop.png" alt="" />
+    </a>
+    <!-- -------- -------------------------- START OF navbar (Header) ------------------ -->
+    <header id="topScreen">
+      <div class="container">
+        <!-- First Part Of Header (NavBar) -->
+        <nav class="FstHeader navbar navbar-expand-lg">
+          <a class="navbar-brand" href="/">
+            <img src="./imges/logo.png" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              width="1.5rem"
+              fill="#d4af37"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">Register As :</li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Auth_Pages/SignUp.html">Company</a>
+              </li>
+              <li class="nav-item Bayer">
+                <a class="nav-link" href="./Auth_Pages/SignUp.html">Bayer </a>
+              </li>
+              <li class="nav-item Bayer">
+                <button class="nav-link" href="#" id="language">
+                  <img src="./imges/language.png" alt="" />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- second part of header (carousal) -->
+        <div class="SecHeader">
+          <div class="HeaderSwiper">
+            <div
+              class="wrapper swiper-wrapper"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+              data-aos-duration="1000"
+            >
+              <div class="slide swiper-slide" data-aos="zoom-in">
+                <p>
+                  TOP 10,000 <span>Tur</span>key <br />
+                  Se<span>ar</span>ch a company <br />
+                  Search a Cate<span>g</span>ories
+                </p>
+                <a href="/">CONTUCT US</a>
+              </div>
+              <div class="slide swiper-slide" data-aos="zoom-in">
+                <p>
+                  TOP 10,000 <span>Tur</span>key <br />
+                  Se<span>ar</span>ch a company <br />
+                  Search a Cate<span>g</span>ories
+                </p>
+                <a href="/">CONTUCT US</a>
+              </div>
+              <div class="slide swiper-slide" data-aos="zoom-in">
+                <p>
+                  TOP 10,000 <span>Tur</span>key <br />
+                  Se<span>ar</span>ch a company <br />
+                  Search a Cate<span>g</span>ories
+                </p>
+                <a href="/">CONTUCT US</a>
+              </div>
+            </div>
+
+            <div class="swiperBtn">
+              <button class="swiper-button-prev">
+                <img src="./imges/prev.png" alt="prev" />
+              </button>
+              <button class="swiper-button-next">
+                <img src="./imges/next.png" alt="next" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="outer">
+          <p data-aos="zoom-in-up" data-aos-offset="-10">TOP 10,000 Turkey</p>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </header>
+    <!-- -------- -------------------------- End OF navbar (Header) ------------------ -->
+    <main>
+      <!-- ------------------------------------start CategoriesSearch  ------------------------>
+      <section class="CategoriesSearch container">
+        <p
+          class="title"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
+          Categories
+        </p>
+        <div class="SearchBlock">
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+            Search
+          </p>
+          <div>
+            <div class="dropdown" data-aos="zoom-in-left">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="dropdowncategroy"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Please select categroy
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdowncategroy">
+                <li><a class="dropdown-item" href="#">categroy1</a></li>
+                <li><a class="dropdown-item" href="#">categroy2</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">categroy3</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown" data-aos="zoom-in-right">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="dropdownCity"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Please select City
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownCity">
+                <li><a class="dropdown-item" href="#">City1</a></li>
+                <li><a class="dropdown-item" href="#">City2</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">City3</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------end CategoriesSearch  ------------------------>
+      <!-- ------------------------------------start AllItems  ------------------------>
+      <section class="AllItems container">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+          <div class="col">
+            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>Al Majed Campany</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="more">
+          <button>
+            <img src="./imges/doubleArrow.png" alt="doubleArrow" />
+          </button>
+          <button data-aos="fade-left" data-aos-duration="500">View All</button>
+        </div>
+      </section>
+      <!-- ------------------------------------end AllItems  ------------------------>
+    </main>
+    <!-- ------------------------------------start Footer ------------------------>
+    <footer>
+      <div class="FstFooter">
+        <div class="container">
+          <div
+            class="row"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+          >
+            <div class="col-md-12 col-lg-5">
+              <img src="./imges/logo.png" alt="logo" />
+              <p>
+                It is a platform for the most important ten thousand factories
+                and companies operating in Turkey, so that this platform is a
+                gateway for foreign buyers to reach the most important Turkish
+                factories and companies, according to different fields.
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-2">
+              <p class="listTitle">Register As</p>
+              <p><a href="/">Company</a> <a href="/">Bayer </a></p>
+            </div>
+            <div class="col-md-4 col-lg-2">
+              <p class="listTitle">Social Media</p>
+              <div>
+                <a href="/">
+                  <img src="./imges/facebook.png" alt="facebook" />
+                </a>
+                <a href="/">
+                  <img src="./imges/tiwitter.png" alt="tiwitter" />
+                </a>
+                <a href="/">
+                  <img src="./imges/instgram.png" alt="instgram" />
+                </a>
+                <a href="/">
+                  <img src="./imges/whatsapp.png" alt="whatsapp" />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <p class="listTitle">Contact Us</p>
+              <ul>
+                <li><img src="./imges/call.png" alt="" /> 0090123456789</li>
+                <li>
+                  <img src="./imges/email.png" alt="" /> Osama123@gmail.com
+                </li>
+                <li>
+                  <img src="./imges/locationWhite.png" alt="" />
+                  <span> Turkeya, Istanbul </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="SecFooter">
+        All rights reserved to TOP 10,000 Turkeya @ 2022
+      </div>
+    </footer>
+    <!-- ------------------------------------end Footer ------------------------>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- link animate css AOS library -->
+    <script src="./js/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      AOS.init();
+      // ----
+      var swiper = new Swiper(".HeaderSwiper", {
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+        },
+      });
+    </script>
+  </body>
+</html>
