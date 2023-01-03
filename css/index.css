@@ -152,6 +152,22 @@ img {
   }
 }
 /* ---------- */
+.loading {
+  position: fixed;
+  background-color: var(--body_color);
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading img {
+  width: 4rem;
+}
+.HideLoading {
+  display: none !important;
+}
 /* button of go to top of page */
 .hide {
   display: none !important;
@@ -499,6 +515,9 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
     margin-right: 0rem;
     width: 100%;
     font-size: 15px;
+  }
+  header .FstHeader .navbar-nav > li:nth-of-type(4) > button {
+    margin-left: 1rem;
   }
   .arabic header .FstHeader .navbar-nav > li:first-of-type {
     margin-right: 0;

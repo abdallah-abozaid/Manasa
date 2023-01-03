@@ -279,8 +279,9 @@ a {
 }
 @media (max-width: 1550px) {
   .SignUp .outerImgs .bigImg {
-    top: -41%;
-    right: -20%;
+    right: -10%;
+    top: -50%;
+    width: 60%;
   }
   .SignUp .SignUpForm {
     width: 40%;
@@ -392,13 +393,23 @@ a {
   html {
     overflow: scroll;
   }
-  .SignUp {
-    margin: 3rem 0;
-  }
+
   .SignUp .outerImgs .bigImg {
     right: -30%;
+    top: -20%;
+    width: 100%;
   }
   .SignUp .SignUpForm {
     width: 95%;
+  }
+  @keyframes moving1 {
+    0% {
+      bottom: 70%;
+      right: -40%;
+    }
+    100% {
+      bottom: -15%;
+      right: 40%;
+    }
   }
 }
