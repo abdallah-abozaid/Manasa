@@ -1,0 +1,294 @@
+/* ----------------------------------------------------- start variables */
+:root {
+  --main_color: #d4af37;
+  --body_color: #1e1e1e;
+  --body2_color: #333333;
+  --body3_color: #2a2b31;
+}
+@font-face {
+  font-family: "DIN Next Arabic ULTRALIGHT";
+  src: url(../../fonts/DIN_NEXT_ARABIC_ULTRALIGHT.otf);
+}
+@font-face {
+  font-family: "DIN Next Arabic LIGHT";
+  src: url(../../fonts/DIN_NEXT_ARABIC_LIGHT.otf);
+}
+@font-face {
+  font-family: "DIN Next Arabic MEDIUM";
+  src: url(../../fonts/DIN_NEXT_ARABIC_MEDIUM.otf);
+}
+
+@font-face {
+  font-family: "DIN Next Arabic regular";
+  src: url(../../fonts/DIN_NEXT_ARABIC_REGULAR.otf);
+}
+@font-face {
+  font-family: "DIN Next Arabic BOLD";
+  src: url(../../fonts/DIN_NEXT_ARABIC_BOLD.otf);
+}
+@keyframes moving1 {
+  0% {
+    bottom: 70%;
+    right: -10%;
+  }
+  100% {
+    bottom: -15%;
+    right: 40%;
+  }
+}
+@keyframes moving2 {
+  0% {
+    top: -10%;
+    right: 40%;
+  }
+  100% {
+    top: 110%;
+    right: 100%;
+  }
+}
+/* ----------------------------------------------------- end variables */
+/* -------------------------------------------------start stander */
+*,
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "DIN Next Arabic regular";
+}
+body {
+  position: relative;
+  overflow-x: auto;
+  background-color: #f8fafb;
+}
+body.arabic {
+  direction: rtl;
+  text-align: right;
+}
+.arabic * {
+  text-align: right;
+}
+input {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--body_color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37a6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main_color);
+}
+.SignIn {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.SignIn .outerImgs .bigImg {
+  position: absolute;
+  top: -31%;
+  right: -8%;
+  z-index: -1;
+}
+.SignIn .SignInForm {
+  width: 35%;
+  background-color: #fff;
+  padding: 4rem 5% 1.5rem;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.03),
+    -5px -5px 12px rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
+  margin: 3rem 0;
+}
+.SignIn .smallImg1 {
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-40deg);
+  animation: moving1 11s 1s ease-in-out infinite;
+}
+.SignIn .smallImg2 {
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-40deg);
+  animation: moving2 8s ease-in-out infinite;
+}
+.SignIn .SignInForm > p {
+  text-align: center;
+}
+.SignIn .SignInForm > p:first-of-type {
+  font-size: 34px;
+  text-transform: uppercase;
+}
+.SignIn .SignInForm > p:last-of-type {
+  font-size: 18px;
+}
+.SignIn .SignInForm .input {
+  margin-bottom: 1.5rem;
+}
+.SignIn .SignInForm .input > label {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+.SignIn .SignInForm .input > div {
+  position: relative;
+  width: 100%;
+  border: 1px solid #e8ecef;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+.SignIn .SignInForm .input > div > input {
+  width: 100%;
+  padding: 0.5rem;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+}
+.SignIn .SignInForm .input > div > img {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+.arabic .SignIn .SignInForm .input > div > img {
+  right: unset;
+  left: 1rem;
+}
+
+.SignIn .SignInForm > a {
+  width: 100%;
+  background-color: var(--main_color);
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+.SignIn .SignInForm .GoSignIn > p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.SignIn .SignInForm .GoSignIn p a {
+  color: var(--main_color);
+}
+@media (max-width: 1550px) {
+  .SignIn .outerImgs .bigImg {
+    right: -10%;
+    top: -50%;
+    width: 60%;
+  }
+  .SignIn .SignInForm {
+    width: 40%;
+    padding: 2rem 3% 1rem;
+    margin: 2rem 0;
+  }
+
+  .SignIn .SignInForm > p:first-of-type {
+    font-size: 25px;
+  }
+  .SignIn .SignInForm > p:last-of-type {
+    font-size: 13px;
+  }
+  .SignIn .SignInForm .input {
+    margin-bottom: 1rem;
+  }
+  .SignIn .SignInForm .input > label {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+  .SignIn .SignInForm .input > div {
+    padding: 0.3rem;
+  }
+  .SignIn .SignInForm .input > div > input {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+  .SignIn .SignInForm .input > div > img {
+    width: 1.3rem;
+  }
+
+  .SignIn .SignInForm > a {
+    padding: 0.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+  }
+  .SignIn .SignInForm .GoSignIn > p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .SignIn .SignInForm .GoSignIn > div a {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    overflow: hidden;
+  }
+  .SignIn .outerImgs .bigImg {
+    right: -30%;
+  }
+  .SignIn .SignInForm {
+    width: 65%;
+  }
+
+  .SignIn .SignInForm > p:first-of-type {
+    font-size: 26px;
+  }
+  .SignIn .SignInForm > p:last-of-type {
+    font-size: 14px;
+  }
+
+  .SignIn .SignInForm > a {
+    font-size: 1rem;
+  }
+  .SignIn .SignInForm .GoSignIn > p {
+    font-size: 0.8rem;
+  }
+
+  .SignIn .SignInForm .GoSignIn > div a {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    overflow: scroll;
+  }
+
+  .SignIn .outerImgs .bigImg {
+    right: -30%;
+    top: -20%;
+    width: 100%;
+  }
+  .SignIn .SignInForm {
+    width: 95%;
+  }
+  @keyframes moving1 {
+    0% {
+      bottom: 70%;
+      right: -40%;
+    }
+    100% {
+      bottom: -15%;
+      right: 40%;
+    }
+  }
+}

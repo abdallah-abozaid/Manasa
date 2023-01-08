@@ -7,24 +7,24 @@
 }
 @font-face {
   font-family: "DIN Next Arabic ULTRALIGHT";
-  src: url(../fonts/DIN_NEXT_ARABIC_ULTRALIGHT.otf);
+  src: url(../../fonts/DIN_NEXT_ARABIC_ULTRALIGHT.otf);
 }
 @font-face {
   font-family: "DIN Next Arabic LIGHT";
-  src: url(../fonts/DIN_NEXT_ARABIC_LIGHT.otf);
+  src: url(../../fonts/DIN_NEXT_ARABIC_LIGHT.otf);
 }
 @font-face {
   font-family: "DIN Next Arabic MEDIUM";
-  src: url(../fonts/DIN_NEXT_ARABIC_MEDIUM.otf);
+  src: url(../../fonts/DIN_NEXT_ARABIC_MEDIUM.otf);
 }
 
 @font-face {
   font-family: "DIN Next Arabic regular";
-  src: url(../fonts/DIN_NEXT_ARABIC_REGULAR.otf);
+  src: url(../../fonts/DIN_NEXT_ARABIC_REGULAR.otf);
 }
 @font-face {
   font-family: "DIN Next Arabic BOLD";
-  src: url(../fonts/DIN_NEXT_ARABIC_BOLD.otf);
+  src: url(../../fonts/DIN_NEXT_ARABIC_BOLD.otf);
 }
 @keyframes moving1 {
   0% {
@@ -55,18 +55,14 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "DIN Next Arabic regular";
+  text-align: right;
 }
 body {
   background-color: #f8fafb;
   overflow-x: auto;
-}
-body.arabic {
   direction: rtl;
-  text-align: right;
 }
-.arabic * {
-  text-align: right;
-}
+
 input {
   outline: none;
 }
@@ -89,7 +85,7 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--main_color);
 }
-.SignUp {
+.SignUpCompany {
   width: 100%;
   overflow: hidden !important;
   min-height: 100vh;
@@ -98,13 +94,13 @@ a {
   justify-content: center;
   position: relative;
 }
-.SignUp .outerImgs .bigImg {
+.SignUpCompany .outerImgs .bigImg {
   position: absolute;
   top: -31%;
   right: -8%;
   z-index: -1;
 }
-.SignUp .SignUpForm {
+.SignUpCompany .SignUpCompanyForm {
   width: 35%;
   background-color: #fff;
   padding: 4rem 5% 1.5rem;
@@ -113,127 +109,119 @@ a {
   border-radius: 0.5rem;
   margin: 3rem 0;
 }
-.SignUp .smallImg1 {
+.SignUpCompany .smallImg1 {
   position: absolute;
   z-index: -1;
   transform: rotate(-40deg);
   animation: moving1 11s 1s ease-in-out infinite;
 }
-.SignUp .smallImg2 {
+.SignUpCompany .smallImg2 {
   position: absolute;
   z-index: -1;
   transform: rotate(-40deg);
   animation: moving2 8s ease-in-out infinite;
 }
-.SignUp .SignUpForm > p {
+
+.SignUpCompany .SignUpCompanyForm > p {
+  font-size: 24px;
+  text-transform: uppercase;
   text-align: center;
 }
-.SignUp .SignUpForm > p:first-of-type {
-  font-size: 34px;
-  text-transform: uppercase;
-}
-.SignUp .SignUpForm > p:last-of-type {
-  font-size: 18px;
-}
-.SignUp .SignUpForm .input {
+
+.SignUpCompany .SignUpCompanyForm .input {
   margin-bottom: 1.5rem;
 }
-.SignUp .SignUpForm .input > label {
+.SignUpCompany .SignUpCompanyForm .input > label {
   font-size: 1rem;
   margin-bottom: 0.6rem;
 }
-.SignUp .SignUpForm .input > div {
+.SignUpCompany .SignUpCompanyForm .input > div {
   position: relative;
   width: 100%;
   border: 1px solid #e8ecef;
   padding: 0.5rem;
   border-radius: 0.3rem;
 }
-.SignUp .SignUpForm .input > div > input {
+.SignUpCompany .SignUpCompanyForm .input > div > input {
   width: 100%;
   padding: 0.5rem;
   height: 100%;
   border: none;
   background-color: transparent;
 }
-.SignUp .SignUpForm .input > div > img {
+.SignUpCompany .SignUpCompanyForm .input > div > img {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  left: 1rem;
   transform: translateY(-50%);
 }
-.arabic .SignUp .SignUpForm .input > div > img {
-  right: unset;
-  left: 1rem;
-}
-.SignUp .SignUpForm .input.phone > div {
+
+.SignUpCompany .SignUpCompanyForm .input.phone > div {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0;
 }
-.SignUp .SignUpForm .input.phone > div > div:first-of-type {
+.SignUpCompany .SignUpCompanyForm .input.phone > div > div:first-of-type {
   width: 30%;
   padding: 0.5rem;
-  border-right: 1px solid #e8ecef;
-  margin-right: 3%;
-}
-.arabic .SignUp .SignUpForm .input.phone > div > div:first-of-type {
-  margin-right: 0%;
-  margin-left: 3%;
   border-left: 1px solid #e8ecef;
-  border-right: none;
+  margin-left: 3%;
 }
-.SignUp .SignUpForm .input.phone > div > div:first-of-type button {
+
+.SignUpCompany
+  .SignUpCompanyForm
+  .input.phone
+  > div
+  > div:first-of-type
+  button {
   box-shadow: none;
   width: 100%;
 }
-.SignUp .SignUpForm .input.phone > div > div:first-of-type button img {
+.SignUpCompany
+  .SignUpCompanyForm
+  .input.phone
+  > div
+  > div:first-of-type
+  button
+  img {
   width: auto;
-  margin-right: 0.5rem;
-}
-.arabic .SignUp .SignUpForm .input.phone > div > div:first-of-type button img {
-  margin-right: 0;
   margin-left: 0.5rem;
 }
-.SignUp .SignUpForm .input.phone > div > div:last-of-type {
+
+.SignUpCompany .SignUpCompanyForm .input.phone > div > div:last-of-type {
   width: 67%;
   padding: 0.5rem;
   position: relative;
 }
-.SignUp .SignUpForm .input.phone > div > div:last-of-type input {
+.SignUpCompany .SignUpCompanyForm .input.phone > div > div:last-of-type input {
   width: 100%;
   height: 100%;
   background-color: transparent;
   border: none;
 }
-.SignUp .SignUpForm .input.phone > div > div:last-of-type > img {
+.SignUpCompany .SignUpCompanyForm .input.phone > div > div:last-of-type > img {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  left: 1rem;
   transform: translateY(-50%);
 }
-.arabic .SignUp .SignUpForm .input.phone > div > div:last-of-type > img {
-  right: unset;
-  left: 1rem;
-}
-.SignUp .SignUpForm .input.Categories button {
+
+.SignUpCompany .SignUpCompanyForm .input.Categories button {
   width: 100%;
   height: 100%;
   box-shadow: none;
-  text-align: left;
-}
-.arabic .SignUp .SignUpForm .input.Categories button {
   text-align: right;
 }
-.SignUp .SignUpForm .input.Categories button::after {
+
+.SignUpCompany .SignUpCompanyForm .input.Categories button::after {
   display: none;
 }
-.SignUp .SignUpForm .input.Categories button::before {
+.SignUpCompany .SignUpCompanyForm .input.Categories button::before {
   content: "";
   position: absolute;
   top: 50%;
-  right: 1rem;
+  left: 1rem;
   transform: translateY(-50%);
   width: 2rem;
   height: 100%;
@@ -245,14 +233,11 @@ a {
   background-position: center;
   background-size: auto;
 }
-.arabic .SignUp .SignUpForm .input.Categories button::before {
-  right: unset;
-  left: 1rem;
-}
-.SignUp .SignUpForm .input.Categories .dropdown-menu {
+
+.SignUpCompany .SignUpCompanyForm .input.Categories .dropdown-menu {
   width: 100%;
 }
-.SignUp .SignUpForm > a {
+.SignUpCompany .SignUpCompanyForm > a {
   width: 100%;
   background-color: var(--main_color);
   display: block;
@@ -264,91 +249,85 @@ a {
   border-radius: 0.5rem;
   font-size: 1.2rem;
 }
-.SignUp .SignUpForm .GoSignIn > p {
-  text-align: center;
-  font-size: 1rem;
-}
-.SignUp .SignUpForm .GoSignIn > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.SignUp .SignUpForm .GoSignIn > div a {
-  font-size: 1.1rem;
-  color: var(--main_color);
-}
+
 @media (max-width: 1550px) {
-  .SignUp .outerImgs .bigImg {
+  .SignUpCompany .outerImgs .bigImg {
     right: -10%;
     top: -50%;
     width: 60%;
   }
-  .SignUp .SignUpForm {
+  .SignUpCompany .SignUpCompanyForm {
     width: 40%;
     padding: 2rem 3% 1rem;
   }
 
-  .SignUp .SignUpForm > p:first-of-type {
-    font-size: 25px;
+  .SignUpCompany .SignUpCompanyForm > p {
+    font-size: 18px;
   }
-  .SignUp .SignUpForm > p:last-of-type {
-    font-size: 13px;
-  }
-  .SignUp .SignUpForm .input {
+
+  .SignUpCompany .SignUpCompanyForm .input {
     margin-bottom: 1rem;
   }
-  .SignUp .SignUpForm .input > label {
+  .SignUpCompany .SignUpCompanyForm .input > label {
     font-size: 0.95rem;
     margin-bottom: 0.4rem;
   }
-  .SignUp .SignUpForm .input > div {
+  .SignUpCompany .SignUpCompanyForm .input > div {
     padding: 0.3rem;
   }
-  .SignUp .SignUpForm .input > div > input {
+  .SignUpCompany .SignUpCompanyForm .input > div > input {
     padding: 0.4rem;
     font-size: 0.9rem;
   }
-  .SignUp .SignUpForm .input > div > img {
+  .SignUpCompany .SignUpCompanyForm .input > div > img {
     width: 1.3rem;
   }
 
-  .SignUp .SignUpForm .input.phone > div > div:first-of-type {
+  .SignUpCompany .SignUpCompanyForm .input.phone > div > div:first-of-type {
     width: 35%;
     padding: 0.3rem;
   }
-  .SignUp .SignUpForm .input.phone > div > div:first-of-type button {
+  .SignUpCompany
+    .SignUpCompanyForm
+    .input.phone
+    > div
+    > div:first-of-type
+    button {
     font-size: 0.9rem;
   }
-  .SignUp .SignUpForm .input.phone > div > div:first-of-type button img {
+  .SignUpCompany
+    .SignUpCompanyForm
+    .input.phone
+    > div
+    > div:first-of-type
+    button
+    img {
     width: 1.5rem;
     margin-right: 0.4rem;
   }
-  .SignUp .SignUpForm .input.phone > div > div:last-of-type {
+  .SignUpCompany .SignUpCompanyForm .input.phone > div > div:last-of-type {
     width: 62%;
     padding: 0.4rem;
   }
-  .SignUp .SignUpForm .input.phone > div > div:last-of-type input {
+  .SignUpCompany
+    .SignUpCompanyForm
+    .input.phone
+    > div
+    > div:last-of-type
+    input {
     font-size: 0.9rem;
   }
 
-  .SignUp .SignUpForm .input.Categories button::before {
+  .SignUpCompany .SignUpCompanyForm .input.Categories button::before {
     width: 1rem;
     background-size: 0.8rem;
   }
 
-  .SignUp .SignUpForm > a {
+  .SignUpCompany .SignUpCompanyForm > a {
     padding: 0.7rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
     border-radius: 0.3rem;
-    font-size: 1rem;
-  }
-  .SignUp .SignUpForm .GoSignIn > p {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .SignUp .SignUpForm .GoSignIn > div a {
     font-size: 1rem;
   }
 }
@@ -356,36 +335,26 @@ a {
   html {
     overflow: hidden;
   }
-  .SignUp .outerImgs .bigImg {
+  .SignUpCompany .outerImgs .bigImg {
     right: -30%;
   }
-  .SignUp .SignUpForm {
+  .SignUpCompany .SignUpCompanyForm {
     width: 65%;
   }
 
-  .SignUp .SignUpForm > p:first-of-type {
-    font-size: 26px;
-  }
-  .SignUp .SignUpForm > p:last-of-type {
-    font-size: 14px;
+  .SignUpCompany .SignUpCompanyForm > p {
+    font-size: 16px;
   }
 
-  .SignUp .SignUpForm .input.phone > div > div:first-of-type {
+  .SignUpCompany .SignUpCompanyForm .input.phone > div > div:first-of-type {
     width: 40%;
   }
 
-  .SignUp .SignUpForm .input.phone > div > div:last-of-type {
+  .SignUpCompany .SignUpCompanyForm .input.phone > div > div:last-of-type {
     width: 57%;
   }
 
-  .SignUp .SignUpForm > a {
-    font-size: 1rem;
-  }
-  .SignUp .SignUpForm .GoSignIn > p {
-    font-size: 0.8rem;
-  }
-
-  .SignUp .SignUpForm .GoSignIn > div a {
+  .SignUpCompany .SignUpCompanyForm > a {
     font-size: 1rem;
   }
 }
@@ -394,12 +363,12 @@ a {
     overflow: scroll;
   }
 
-  .SignUp .outerImgs .bigImg {
+  .SignUpCompany .outerImgs .bigImg {
     right: -30%;
     top: -20%;
     width: 100%;
   }
-  .SignUp .SignUpForm {
+  .SignUpCompany .SignUpCompanyForm {
     width: 95%;
   }
   @keyframes moving1 {

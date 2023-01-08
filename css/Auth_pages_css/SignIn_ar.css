@@ -7,24 +7,24 @@
 }
 @font-face {
   font-family: "DIN Next Arabic ULTRALIGHT";
-  src: url(../fonts/DIN_NEXT_ARABIC_ULTRALIGHT.otf);
+  src: url(../../fonts/DIN_NEXT_ARABIC_ULTRALIGHT.otf);
 }
 @font-face {
   font-family: "DIN Next Arabic LIGHT";
-  src: url(../fonts/DIN_NEXT_ARABIC_LIGHT.otf);
+  src: url(../../fonts/DIN_NEXT_ARABIC_LIGHT.otf);
 }
 @font-face {
   font-family: "DIN Next Arabic MEDIUM";
-  src: url(../fonts/DIN_NEXT_ARABIC_MEDIUM.otf);
+  src: url(../../fonts/DIN_NEXT_ARABIC_MEDIUM.otf);
 }
 
 @font-face {
   font-family: "DIN Next Arabic regular";
-  src: url(../fonts/DIN_NEXT_ARABIC_REGULAR.otf);
+  src: url(../../fonts/DIN_NEXT_ARABIC_REGULAR.otf);
 }
 @font-face {
   font-family: "DIN Next Arabic BOLD";
-  src: url(../fonts/DIN_NEXT_ARABIC_BOLD.otf);
+  src: url(../../fonts/DIN_NEXT_ARABIC_BOLD.otf);
 }
 @keyframes moving1 {
   0% {
@@ -54,19 +54,15 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "DIN Next Arabic regular";
+  text-align: right;
 }
 body {
   position: relative;
   overflow-x: auto;
   background-color: #f8fafb;
-}
-body.arabic {
   direction: rtl;
-  text-align: right;
 }
-.arabic * {
-  text-align: right;
-}
+
 input {
   outline: none;
 }
@@ -89,18 +85,7 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--main_color);
 }
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-.ConfirmEmail {
+.SignIn {
   width: 100%;
   min-height: 100vh;
   overflow: hidden !important;
@@ -109,123 +94,140 @@ input[type="number"] {
   justify-content: center;
   position: relative;
 }
-.ConfirmEmail .outerImgs .bigImg {
+.SignIn .outerImgs .bigImg {
   position: absolute;
   top: -31%;
   right: -8%;
   z-index: -1;
 }
-.ConfirmEmail .ConfirmEmailForm {
+.SignIn .SignInForm {
   width: 35%;
   background-color: #fff;
   padding: 4rem 5% 1.5rem;
   box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.03),
     -5px -5px 12px rgba(0, 0, 0, 0.03);
   border-radius: 0.5rem;
+  margin: 3rem 0;
 }
-.ConfirmEmail .smallImg1 {
+.SignIn .smallImg1 {
   position: absolute;
   z-index: -1;
   transform: rotate(-40deg);
   animation: moving1 11s 1s ease-in-out infinite;
 }
-.ConfirmEmail .smallImg2 {
+.SignIn .smallImg2 {
   position: absolute;
   z-index: -1;
   transform: rotate(-40deg);
   animation: moving2 8s ease-in-out infinite;
 }
-.ConfirmEmail .ConfirmEmailForm > p {
+.SignIn .SignInForm > p {
   text-align: center;
 }
-.ConfirmEmail .ConfirmEmailForm > p:first-of-type {
+.SignIn .SignInForm > p:first-of-type {
   font-size: 34px;
   text-transform: uppercase;
 }
-.ConfirmEmail .ConfirmEmailForm > p:last-of-type {
-  color: #778ca2;
-  font-size: 1.1rem;
+.SignIn .SignInForm > p:last-of-type {
+  font-size: 18px;
 }
-.ConfirmEmail .ConfirmEmailForm > p:last-of-type a {
-  color: #4d7cfe;
-}
-
-.ConfirmEmail .ConfirmEmailForm .input {
+.SignIn .SignInForm .input {
   margin-bottom: 1.5rem;
 }
-.ConfirmEmail .ConfirmEmailForm .input > label {
+.SignIn .SignInForm .input > label {
   font-size: 1rem;
   margin-bottom: 0.6rem;
 }
-.ConfirmEmail .ConfirmEmailForm .input > div {
+.SignIn .SignInForm .input > div {
+  position: relative;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.ConfirmEmail .ConfirmEmailForm .input > div > input {
-  padding: 0.8rem;
   border: 1px solid #e8ecef;
-  background-color: transparent;
+  padding: 0.5rem;
   border-radius: 0.3rem;
-  width: 15%;
 }
-.ConfirmEmail .ConfirmEmailForm .input > div > img {
+.SignIn .SignInForm .input > div > input {
+  width: 100%;
+  padding: 0.5rem;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+}
+.SignIn .SignInForm .input > div > img {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  left: 1rem;
   transform: translateY(-50%);
 }
-.ConfirmEmail .ConfirmEmailForm .btns {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 2rem 0;
+
+.SignIn .SignInForm > a {
+  width: 100%;
+  background-color: var(--main_color);
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
 }
-.ConfirmEmail .ConfirmEmailForm .btns button {
-  background-color: #f8fafb;
-  border: none;
-  padding: 0.7rem 2rem;
-  border-radius: 0.2rem;
+.SignIn .SignInForm .GoSignIn > p {
+  text-align: center;
   font-size: 1.1rem;
 }
-.ConfirmEmail .ConfirmEmailForm .btns button:last-of-type {
-  background-color: var(--main_color);
-  color: #fff;
+
+.SignIn .SignInForm .GoSignIn p a {
+  color: var(--main_color);
 }
 @media (max-width: 1550px) {
-  .ConfirmEmail .outerImgs .bigImg {
+  .SignIn .outerImgs .bigImg {
     right: -10%;
     top: -50%;
     width: 60%;
   }
-  .ConfirmEmail .ConfirmEmailForm {
+  .SignIn .SignInForm {
     width: 40%;
     padding: 2rem 3% 1rem;
     margin: 2rem 0;
   }
 
-  .ConfirmEmail .ConfirmEmailForm > p:first-of-type {
+  .SignIn .SignInForm > p:first-of-type {
     font-size: 25px;
   }
-  .ConfirmEmail .ConfirmEmailForm > p:last-of-type {
+  .SignIn .SignInForm > p:last-of-type {
     font-size: 13px;
   }
-  .ConfirmEmail .ConfirmEmailForm .input {
+  .SignIn .SignInForm .input {
     margin-bottom: 1rem;
   }
-  .ConfirmEmail .ConfirmEmailForm .input > label {
+  .SignIn .SignInForm .input > label {
     font-size: 0.95rem;
     margin-bottom: 0.4rem;
   }
-  .ConfirmEmail .ConfirmEmailForm .input > div {
+  .SignIn .SignInForm .input > div {
     padding: 0.3rem;
   }
-  .ConfirmEmail .ConfirmEmailForm .input > div > input {
+  .SignIn .SignInForm .input > div > input {
+    padding: 0.4rem;
     font-size: 0.9rem;
   }
-  .ConfirmEmail .ConfirmEmailForm .btns button {
-    padding: 0.5rem 1rem;
+  .SignIn .SignInForm .input > div > img {
+    width: 1.3rem;
+  }
+
+  .SignIn .SignInForm > a {
+    padding: 0.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+  }
+  .SignIn .SignInForm .GoSignIn > p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .SignIn .SignInForm .GoSignIn > div a {
     font-size: 1rem;
   }
 }
@@ -233,36 +235,28 @@ input[type="number"] {
   html {
     overflow: hidden;
   }
-  .ConfirmEmail .outerImgs .bigImg {
+  .SignIn .outerImgs .bigImg {
     right: -30%;
   }
-  .ConfirmEmail .ConfirmEmailForm {
+  .SignIn .SignInForm {
     width: 65%;
   }
 
-  .ConfirmEmail .ConfirmEmailForm > p:first-of-type {
+  .SignIn .SignInForm > p:first-of-type {
     font-size: 26px;
   }
-  .ConfirmEmail .ConfirmEmailForm > p:last-of-type {
+  .SignIn .SignInForm > p:last-of-type {
     font-size: 14px;
   }
 
-  .ConfirmEmail .ConfirmEmailForm .input.phone > div > div:first-of-type {
-    width: 40%;
-  }
-
-  .ConfirmEmail .ConfirmEmailForm .input.phone > div > div:last-of-type {
-    width: 57%;
-  }
-
-  .ConfirmEmail .ConfirmEmailForm > a {
+  .SignIn .SignInForm > a {
     font-size: 1rem;
   }
-  .ConfirmEmail .ConfirmEmailForm .GoConfirmEmail > p {
+  .SignIn .SignInForm .GoSignIn > p {
     font-size: 0.8rem;
   }
 
-  .ConfirmEmail .ConfirmEmailForm .GoConfirmEmail > div a {
+  .SignIn .SignInForm .GoSignIn > div a {
     font-size: 1rem;
   }
 }
@@ -271,12 +265,12 @@ input[type="number"] {
     overflow: scroll;
   }
 
-  .ConfirmEmail .outerImgs .bigImg {
+  .SignIn .outerImgs .bigImg {
     right: -30%;
     top: -20%;
     width: 100%;
   }
-  .ConfirmEmail .ConfirmEmailForm {
+  .SignIn .SignInForm {
     width: 95%;
   }
   @keyframes moving1 {
