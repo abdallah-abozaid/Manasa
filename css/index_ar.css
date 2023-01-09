@@ -549,6 +549,137 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
 /* ------------------------------------------------------------end header */
 
 /* --------------------------------------------------------------start main */
+/* -------start TotalRates */
+.TotalRates > div {
+  margin: 5rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+.TotalRates > div > div {
+  background-color: #333333;
+  width: 30%;
+  border-radius: 1rem;
+  height: 12rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 4px 5px 12px rgba(0, 0, 0, 0.322);
+}
+.TotalRates > div > div:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.TotalRates > div > div > div:first-of-type {
+  border-bottom: 2px solid var(--main_color);
+  padding: 1rem 2rem;
+}
+.TotalRates > div > div > div:first-of-type p {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--main_color);
+}
+.TotalRates > div > div > div:last-of-type {
+  padding: 1rem 3rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.TotalRates > div > div > div:last-of-type > div > p:first-of-type {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.TotalRates > div > div > div:last-of-type > div > p:last-of-type {
+  font-size: 1rem;
+}
+.TotalRates > div > div > div:last-of-type > div > img {
+  width: auto;
+}
+
+.TotalRates > div .TotalUsers .imgs {
+  width: 5rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.TotalRates > div .TotalUsers .imgs span {
+  width: 0.35rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  display: inline-block;
+}
+.TotalRates > div .TotalUsers .imgs span:nth-of-type(1),
+.TotalRates > div .TotalUsers .imgs span:nth-of-type(2) {
+  background-color: var(--main_color);
+}
+.TotalRates > div .TotalUsers .imgs span:nth-of-type(2),
+.TotalRates > div .TotalUsers .imgs span:nth-of-type(3) {
+  height: 1.5rem;
+}
+
+.TotalRates > div .TotalUsers .imgs span:nth-of-type(4) {
+  height: 1.8rem;
+}
+.TotalRates > div .TotalUsers .imgs span:nth-of-type(5) {
+  height: 1.2rem;
+}
+.TotalRates > div .TotalUsers .imgs span:nth-of-type(6) {
+  height: 1.6rem;
+}
+.TotalRates > div .TotalUsers .imgs span:nth-of-type(7) {
+  height: 2rem;
+}
+@media (max-width: 1550px) {
+  .TotalRates > div {
+    margin: 4rem auto 0;
+  }
+  .TotalRates > div > div {
+    border-radius: 0.5rem;
+    height: 10rem;
+  }
+
+  .TotalRates > div > div > div:first-of-type {
+    padding: 1rem 1.5rem;
+  }
+  .TotalRates > div > div > div:first-of-type p {
+    font-size: 1.2rem;
+  }
+  .TotalRates > div > div > div:last-of-type {
+    padding: 0.6rem 2rem 0 1.5rem;
+  }
+  .TotalRates > div > div > div:last-of-type > div > p:first-of-type {
+    font-size: 1.6rem;
+  }
+  .TotalRates > div > div > div:last-of-type > div > p:last-of-type {
+    font-size: 0.9rem;
+  }
+
+  .TotalRates > div .TotalUsers .imgs span {
+    width: 0.28rem;
+    height: 2.2rem;
+  }
+}
+@media (max-width: 992px) {
+  .TotalRates > div {
+    margin: 4rem auto 0;
+    flex-wrap: wrap;
+  }
+  .TotalRates > div > div {
+    width: 49%;
+    height: 10.5rem;
+    margin-bottom: 1rem;
+  }
+  .TotalRates > div > div:last-of-type {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .TotalRates > div > div {
+    width: 100%;
+  }
+}
+/* -------end TotalRates */
 /* -------start CategoriesSearch */
 .CategoriesSearch {
   margin-top: 5rem;
@@ -864,16 +995,54 @@ footer .FstFooter > div > div > div:nth-of-type(2) > div {
   justify-content: flex-start;
 }
 footer .FstFooter > div > div > div:nth-of-type(2) > div a {
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
-footer .FstFooter > div > div > div:nth-of-type(2) > div a img {
-  width: auto;
-  opacity: 0.7;
+footer .FstFooter > div > div > div:nth-of-type(2) > div a svg {
   transition: all 0.3s ease-in-out;
 }
-footer .FstFooter > div > div > div:nth-of-type(2) > div a:hover img {
+footer .FstFooter > div > div > div:nth-of-type(2) > div a:hover svg {
   transform: scale(1.1);
   opacity: 1;
+}
+footer
+  .FstFooter
+  > div
+  > div
+  > div:nth-of-type(2)
+  > div
+  a:nth-of-type(1):hover
+  svg {
+  fill: #4267b2;
+}
+footer
+  .FstFooter
+  > div
+  > div
+  > div:nth-of-type(2)
+  > div
+  a:nth-of-type(2):hover
+  svg {
+  fill: #1da1f2;
+}
+footer
+  .FstFooter
+  > div
+  > div
+  > div:nth-of-type(2)
+  > div
+  a:nth-of-type(3):hover
+  svg {
+  fill: #cc2366;
+}
+footer
+  .FstFooter
+  > div
+  > div
+  > div:nth-of-type(2)
+  > div
+  a:nth-of-type(4):hover
+  svg {
+  fill: #25d366;
 }
 footer .FstFooter > div > div > div:nth-of-type(3) ul {
   margin: 0;
@@ -913,9 +1082,11 @@ footer .SecFooter {
   }
 
   footer .FstFooter > div > div > div:nth-of-type(2) > div a {
-    margin-right: 0.8rem;
+    margin-left: 0.5rem;
   }
-
+  footer .FstFooter > div > div > div:nth-of-type(2) > div a svg {
+    width: 1.8rem;
+  }
   footer .FstFooter > div > div > div:nth-of-type(3) ul li {
     margin-bottom: 0.7rem;
     font-size: 17px;
@@ -943,10 +1114,6 @@ footer .SecFooter {
     margin-bottom: 1rem;
   }
 
-  footer .FstFooter > div > div > div:nth-of-type(2) > div a {
-    margin-right: 0.7rem;
-  }
-
   footer .FstFooter > div > div > div:nth-of-type(3) ul li {
     margin-bottom: 0.5rem;
     font-size: 15px;
@@ -963,10 +1130,6 @@ footer .SecFooter {
 @media (max-width: 576px) {
   footer .FstFooter > div > div > div:first-of-type img {
     margin-left: -1rem;
-  }
-  footer .FstFooter > div > div > div:nth-of-type(2) > div a {
-    margin-right: 0.7rem;
-    width: 2rem;
   }
 }
 
