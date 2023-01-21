@@ -231,50 +231,68 @@ header .container {
   height: 100vh;
   position: relative;
 }
-header .FstHeader .navbar-brand a {
-  width: auto;
+header .FstHeader {
+  padding-top: 1.5rem;
+}
+header .FstHeader .navbar-nav li.dropdown ul {
+  padding: 0rem !important;
+  border-radius: 0.5rem;
+  background-color: var(--body_color);
+  border: 1px solid rgb(73, 73, 73);
+}
+header .FstHeader .navbar-nav li.dropdown ul li {
+  margin: 0.5rem;
+}
+header .FstHeader .navbar-nav li.dropdown ul li a {
+  border-radius: 0.3rem;
+  font-size: 20px;
+  color: #fff !important;
+}
+header .FstHeader .navbar-nav li.dropdown ul li a:hover {
+  background-color: var(--body2_color);
 }
 header .FstHeader .navbar-nav li {
-  margin: 0 0.7rem;
+  margin: 1rem;
 }
 header .FstHeader .navbar-nav li a {
   font-size: 22px;
-  padding: 0.2rem 0.4rem 0.4rem !important;
+  padding: 0.2rem 0.5rem 0.4rem !important;
   display: inline-block;
   font-family: "DIN Next Arabic LIGHT";
   border-radius: 0.2rem;
+  position: relative;
 }
-header .FstHeader .navbar-nav > li:hover > a {
-  animation: wiggle 2s linear infinite;
+header .FstHeader .navbar-nav li a > span {
+  position: absolute;
+  bottom: -0.3rem;
+  right: 0;
+  width: 0%;
+  height: 0.11rem;
+  background-color: var(--main_color);
+  transition: all 0.3s ease-in-out;
 }
-header .FstHeader .navbar-nav > li:first-of-type {
-  margin-left: 3rem;
-  font-size: 22px;
-  padding: 0.2rem 0.4rem 0.4rem !important;
-  display: inline-block;
+header .FstHeader .navbar-nav li a:hover > span {
+  width: 100%;
+}
+header .FstHeader .navbar-nav li a.active > span {
+  width: 100%;
+}
+header .FstHeader .navbar-nav > li.Company a {
+  margin-right: 2rem;
+  padding: 0.2rem 1rem 0.4rem !important;
   font-family: "DIN Next Arabic LIGHT";
   border-radius: 0.2rem;
+  border: 1px solid #ffffff3f;
 }
 
-header .FstHeader .navbar-nav > li:nth-of-type(2) > a {
-  border: 1px solid #ffffff3f;
-  min-width: 8rem;
-  text-align: center;
-}
-header .FstHeader .navbar-nav > li:nth-of-type(3) > a {
+header .FstHeader .navbar-nav > li.Bayer > a {
   border: 1px solid var(--main_color);
   background-color: var(--main_color);
   min-width: 7rem;
   text-align: center;
 }
 
-header .FstHeader .navbar-nav > li:nth-of-type(4) {
-  margin-right: 3rem;
-  background-color: transparent;
-  border: none;
-}
-
-header .FstHeader .navbar-nav > li:nth-of-type(4) img {
+header .FstHeader .navbar-nav > li:last-of-type img {
   width: auto;
 }
 
@@ -370,16 +388,27 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
 }
 /* ------------------ */
 @media (max-width: 1550px) {
-  header .FstHeader .navbar-nav li a {
-    font-size: 18px;
-  }
-  header .FstHeader .navbar-nav > li:first-of-type {
-    margin-left: 2rem;
-    font-size: 19px;
+  header .FstHeader {
+    padding-top: 1rem;
   }
 
-  header .FstHeader .navbar-nav > li:nth-of-type(2) > a {
-    min-width: 7rem;
+  header .FstHeader .navbar-nav li.dropdown ul li a {
+    border-radius: 0.2rem;
+    font-size: 1rem;
+  }
+  header .FstHeader .navbar-nav li {
+    margin: 0.7rem;
+  }
+  header .FstHeader .navbar-nav li a {
+    font-size: 1rem;
+  }
+
+  header .FstHeader .navbar-nav > li.Company a {
+    margin-right: 1rem;
+  }
+
+  header .FstHeader .navbar-nav > li.Bayer > a {
+    min-width: 6rem;
   }
 
   header .SecHeader > div.HeaderSwiper .swiper-slide p {
@@ -424,24 +453,13 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   header .navbar-nav {
     justify-content: center;
     flex-direction: unset;
+    padding: 0;
   }
   header .FstHeader .navbar-nav li {
-    margin: 0 0 1rem 0;
+    margin: 0 0.5rem 0;
   }
   header .FstHeader .navbar-nav li a {
     font-size: 17px;
-  }
-  header .FstHeader .navbar-nav > li:first-of-type {
-    margin-left: 2rem;
-    font-size: 18px;
-  }
-
-  header .FstHeader .navbar-nav > li:nth-of-type(2) > a {
-    margin-right: 1rem;
-  }
-
-  header .FstHeader .navbar-nav > li:nth-of-type(4) > a {
-    margin-left: 2rem;
   }
 
   header .SecHeader {
@@ -482,6 +500,9 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   }
 }
 @media (max-width: 576px) {
+  header .navbar-brand img {
+    width: 11rem;
+  }
   header .container,
   header {
     height: 100vh !important;
@@ -490,48 +511,48 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   header .SecHeader {
     height: 80vh;
   }
-  header .navbar .navbar-brand {
-    width: 60%;
-  }
+
   header .navbar-nav {
     justify-content: flex-start;
     flex-wrap: wrap;
   }
-
+  header .FstHeader .navbar-nav li:nth-of-type(1),
+  header .FstHeader .navbar-nav li:nth-of-type(2),
+  header .FstHeader .navbar-nav li:nth-of-type(3),
+  header .FstHeader .navbar-nav li:nth-of-type(4),
+  header .FstHeader .navbar-nav li:last-of-type {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  header .FstHeader .navbar-nav li:last-of-type {
+    margin-top: 1rem;
+  }
+  header .FstHeader .navbar-nav > li.Company a {
+    margin-right: 0rem;
+  }
+  header .FstHeader .navbar-nav li a > span {
+    bottom: -0.1rem;
+    height: 0.1rem;
+  }
   header .FstHeader .navbar-nav li a {
     font-size: 15px;
   }
-  header .FstHeader .navbar-nav > li:first-of-type {
-    margin-left: 0rem;
-    width: 100%;
-    font-size: 15px;
-  }
-  header .FstHeader .navbar-nav > li:nth-of-type(4) > button {
-    margin-left: 1rem;
-  }
-
-  header .FstHeader .navbar-nav > li:nth-of-type(2) > a {
-    margin-right: 1rem;
-  }
-  header .FstHeader .navbar-nav > li:nth-of-type(4) {
-    width: 100%;
-  }
-  header .FstHeader .navbar-nav > li:nth-of-type(4) > a {
-    margin-left: 0rem;
-  }
 
   header .SecHeader > div.HeaderSwiper .swiper-slide p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 2.2rem;
+    margin-bottom: 0.5rem;
   }
-
+  header .SecHeader > div.HeaderSwiper .swiper-slide p span.smallSize {
+    font-size: 19px;
+  }
   header .SecHeader > div.HeaderSwiper .swiper-slide a {
     font-size: 13px;
     margin-top: 0.5rem;
     margin-bottom: 5rem;
   }
   header .SecHeader > div.HeaderSwiper .swiperBtn button {
-    width: 2.1rem;
+    width: 2rem;
   }
   header .outer {
     width: 90%;
@@ -549,7 +570,655 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
 /* ------------------------------------------------------------end header */
 
 /* --------------------------------------------------------------start main */
+
+/* -------start CategoriesSearch */
+.CategoriesSearch {
+  margin-top: 4rem;
+  z-index: 100;
+  position: relative;
+}
+
+.CategoriesSearch .SearchBlock {
+  width: 85%;
+  background-color: var(--body2_color);
+  margin: 2rem auto;
+  border-radius: 1.5rem;
+  text-align: center;
+  padding: 2rem 2rem 1rem;
+}
+.CategoriesSearch .SearchBlock > p {
+  font-size: 60px;
+  color: var(--main_color);
+  text-transform: uppercase;
+  font-family: "DIN Next Arabic LIGHT";
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.CategoriesSearch .SearchBlock > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 4rem auto;
+}
+.CategoriesSearch .SearchBlock > div .dropdown {
+  background-color: #ffffff;
+  width: 48%;
+  border-radius: 0.2rem;
+}
+
+.CategoriesSearch .SearchBlock > div .dropdown > button {
+  padding: 0.8rem 1.5rem;
+  text-align: right;
+  font-size: 20px;
+  width: 100%;
+  color: grey;
+  box-shadow: none;
+  position: relative;
+  font-family: "DIN Next Arabic regular";
+}
+
+.CategoriesSearch .SearchBlock > div .dropdown > button::after {
+  display: none;
+}
+.CategoriesSearch .SearchBlock > div .dropdown > button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  background-image: url(../imges/arrowBottom.png);
+  width: 1.5rem;
+  background-repeat: no-repeat;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  justify-content: center;
+  background-size: auto;
+}
+
+.CategoriesSearch .SearchBlock > div .dropdown .dropdown-menu {
+  width: 100%;
+}
+.CategoriesSearch .SearchBlock > div .dropdown .dropdown-menu a {
+  color: grey !important;
+  font-size: 20px;
+}
+
+@media (max-width: 1550px) {
+  .CategoriesSearch .SearchBlock {
+    border-radius: 1rem;
+    padding: 2rem 1rem 1rem;
+  }
+  .CategoriesSearch .SearchBlock > p {
+    font-size: 33px;
+    margin-top: 1rem;
+  }
+  .CategoriesSearch .SearchBlock > div {
+    margin: 2rem auto;
+  }
+
+  .CategoriesSearch .SearchBlock > div .dropdown > button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .CategoriesSearch .SearchBlock > div .dropdown > button::before {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .CategoriesSearch .SearchBlock > div .dropdown .dropdown-menu a {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 992px) {
+  .CategoriesSearch .SearchBlock > p {
+    font-size: 1.5rem;
+    margin-top: 0rem;
+  }
+  .CategoriesSearch .SearchBlock > div {
+    margin: 1rem auto;
+  }
+
+  .CategoriesSearch .SearchBlock > div .dropdown > button {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .CategoriesSearch .SearchBlock > div .dropdown > button::before {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .CategoriesSearch .SearchBlock > div .dropdown .dropdown-menu a {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 576px) {
+  .CategoriesSearch .SearchBlock > p {
+    margin-bottom: 2rem;
+  }
+  .CategoriesSearch .SearchBlock > div {
+    display: block;
+  }
+  .CategoriesSearch .SearchBlock > div .dropdown {
+    width: 100%;
+    margin-bottom: 0.6rem;
+  }
+
+  .CategoriesSearch .title {
+    font-size: 25px;
+    margin-bottom: 2rem;
+  }
+  .CategoriesSearch .SearchBlock {
+    padding: 1rem 1rem 1rem;
+    width: 100%;
+  }
+
+  .CategoriesSearch .SearchBlock > p {
+    font-size: 19px;
+  }
+}
+/* -------end CategoriesSearch */
+/* -------start AllItems */
+.AllItems {
+  background-color: var(--body2_color);
+  border-radius: 0.8rem;
+  text-align: center;
+  padding: 4rem;
+}
+.AllItems > a:first-of-type {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  background-color: var(--main_color);
+  color: #fff;
+  padding: 0.6rem 2rem;
+  border-radius: 0.2rem;
+  font-family: "DIN Next Arabic LIGHT";
+}
+.AllItems .card {
+  background-color: var(--body3_color);
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.AllItems .card .card-img-top {
+  position: relative;
+}
+.AllItems .card .card-img-top::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.3;
+}
+.AllItems .card:hover {
+  transform: scale(1.05);
+}
+.AllItems .card:hover .card-img-top::after {
+  opacity: 0;
+}
+.AllItems .card .card-body {
+  padding: 1rem 2rem;
+}
+.AllItems .card .card-body > p {
+  font-size: 25px;
+}
+.AllItems .card .card-body > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.AllItems .card .card-body > div p {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.AllItems .card .card-body > div p img {
+  width: auto;
+  margin-left: 0.5rem;
+}
+
+.AllItems .more {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0 0;
+}
+.AllItems .more button {
+  background-color: transparent;
+  border: none;
+}
+.AllItems .more button:first-of-type {
+  animation: moving 1s ease-in-out infinite alternate;
+}
+.AllItems .more button:last-of-type {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  border: 1px solid #fff;
+  border-radius: 0.4rem;
+  padding: 0.5rem 2.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.AllItems .more button:last-of-type:hover {
+  background-color: #fff;
+  color: #000;
+}
+@media (max-width: 1550px) {
+  .AllItems > a:first-of-type {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 0.4rem 2rem;
+  }
+  .AllItems {
+    padding: 3rem;
+  }
+
+  .AllItems .card .card-body {
+    padding: 1rem 1rem;
+  }
+  .AllItems .card .card-body > p {
+    font-size: 18px;
+  }
+
+  .AllItems .card .card-body > div p {
+    font-size: 1rem;
+  }
+  .AllItems .card .card-body > div p img {
+    margin-right: 0.4rem;
+  }
+  .AllItems .more {
+    margin: 1rem 0 1rem;
+  }
+
+  .AllItems .more button:last-of-type {
+    border-radius: 0.3rem;
+    padding: 0.5rem 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .AllItems > a:first-of-type {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .AllItems {
+    padding: 2rem;
+  }
+
+  .AllItems .card .card-body {
+    padding: 1rem 1rem;
+  }
+  .AllItems .card .card-body > p {
+    font-size: 15px;
+  }
+
+  .AllItems .card .card-body > div p {
+    font-size: 0.8rem;
+  }
+
+  .AllItems .more button:last-of-type {
+    padding: 0.4rem 1rem;
+  }
+}
+@media (max-width: 576px) {
+}
+/* -------end AllItems */
+/* -------start blogs */
+.blogs {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.blogs .title {
+  font-size: 60px;
+  color: var(--main_color);
+  text-transform: uppercase;
+  font-family: "DIN Next Arabic LIGHT";
+  font-weight: 600;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.blogs > div {
+  background-color: var(--body2_color);
+  border-radius: 2rem;
+  padding: 4rem;
+}
+.blogs > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid grey;
+  padding: 3rem;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.blogs > div > div > div:first-of-type img {
+  width: auto;
+}
+.blogs > div > div > div:first-of-type {
+  margin-left: 5%;
+}
+.blogs > div > div > div:last-of-type {
+  height: 100%;
+}
+.blogs > div > div > div:last-of-type p:first-of-type {
+  font-size: 2.8rem;
+  font-family: "DIN Next Arabic LIGHT";
+  font-weight: 500;
+}
+.blogs > div > div > div:last-of-type p:last-of-type {
+  font-size: 1.4rem;
+  font-family: "DIN Next Arabic LIGHT";
+  width: 70%;
+}
+.blogs > div > div > div:last-of-type div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+.blogs > div > div > div:last-of-type div a {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  font-family: "DIN Next Arabic LIGHT";
+}
+.blogs > div > div:hover > div:last-of-type div a {
+  animation: wiggle 2s linear infinite;
+}
+.blogs > div > div > div:last-of-type div a img {
+  transform: rotate(90deg) translateX(0.3rem);
+  margin-right: 0.3rem;
+  width: 0.9rem;
+}
+.blogs > div > button {
+  margin: 4rem auto 0rem;
+  display: block;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6rem;
+  transition: all 0.3s ease-in-out;
+}
+.blogs > div > button:hover {
+  color: #fff;
+  background-color: var(--body_color);
+}
+@media (max-width: 1550px) {
+  .blogs {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .blogs .title {
+    font-size: 37px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+  .blogs > div {
+    border-radius: 1rem;
+    padding: 3rem;
+  }
+  .blogs > div > div {
+    padding: 2rem;
+    border-radius: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+  .blogs > div > div > div:first-of-type img {
+    width: 90%;
+  }
+  .blogs > div > div > div:last-of-type p:first-of-type {
+    font-size: 1.8rem;
+  }
+  .blogs > div > div > div:last-of-type p:last-of-type {
+    font-size: 1.1rem;
+    width: 80%;
+  }
+  .blogs > div > div > div:last-of-type div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .blogs > div > div > div:last-of-type div a {
+    font-size: 1rem;
+  }
+
+  .blogs > div > div > div:last-of-type div a img {
+    width: 0.7rem;
+  }
+  .blogs > div > button {
+    margin: 2rem auto 0rem;
+    font-size: 1rem;
+    border-radius: 4rem;
+  }
+}
+@media (max-width: 992px) {
+  .blogs {
+    margin-bottom: 1rem;
+  }
+  .blogs .title {
+    font-size: 32px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  .blogs > div {
+    padding: 2rem;
+  }
+  .blogs > div > div {
+    padding: 2rem;
+    margin-bottom: 1rem;
+  }
+  .blogs > div > div > div:first-of-type img {
+    width: 100%;
+  }
+  .blogs > div > div > div:last-of-type p:first-of-type {
+    font-size: 1.2rem;
+  }
+  .blogs > div > div > div:last-of-type p:last-of-type {
+    font-size: 0.9rem;
+    width: 95%;
+  }
+
+  .blogs > div > div > div:last-of-type div a {
+    font-size: 0.9rem;
+  }
+
+  .blogs > div > button {
+    margin: 1rem auto 0rem;
+  }
+}
+@media (max-width: 576px) {
+  .blogs .title {
+    font-size: 20px;
+  }
+  .blogs > div {
+    padding: 2rem;
+  }
+  .blogs > div > div {
+    padding: 1rem;
+    display: block;
+  }
+  .blogs > div > div > div:first-of-type img {
+    width: 80%;
+    margin: 1rem auto;
+    display: block;
+  }
+  .blogs > div > div > div:last-of-type p:first-of-type {
+    font-size: 1rem;
+  }
+  .blogs > div > div > div:last-of-type p:last-of-type {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+}
+/* -------end blogs */
+/* -------start fqa */
+.fqa {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.fqa .title {
+  font-size: 60px;
+  color: var(--main_color);
+  text-transform: uppercase;
+  font-family: "DIN Next Arabic LIGHT";
+  font-weight: 600;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.fqa > div {
+  background-color: var(--body2_color);
+  border-radius: 2rem;
+  padding: 4rem;
+}
+.fqa > div .accordion-item {
+  background-color: transparent;
+  border: 2px solid grey;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.fqa > div .accordion-item .accordion-button {
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.7rem;
+  box-shadow: none;
+  position: relative;
+  padding: 2.5rem;
+  padding-left: 4rem;
+}
+.fqa > div .accordion-item .accordion-body {
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.4rem;
+  box-shadow: none;
+  padding: 2rem;
+  font-family: "DIN Next Arabic LIGHT";
+  padding-top: 0;
+  width: 80%;
+}
+.fqa > div .accordion-button::after {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  content: "+";
+  background-image: none;
+  font-size: 3.1rem;
+  width: 3rem;
+  height: 70%;
+}
+.fqa > div .accordion-button:not(.collapsed)::after {
+  content: "-" !important;
+  font-size: 3.5rem !important;
+}
+@media (max-width: 1550px) {
+  .fqa {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .fqa .title {
+    font-size: 37px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+  .fqa > div {
+    border-radius: 1rem;
+    padding: 3rem;
+  }
+  .fqa > div .accordion-item {
+    border: 1px solid grey;
+    margin-bottom: 1.5rem;
+    border-radius: 0.6rem;
+  }
+  .fqa > div .accordion-item .accordion-button {
+    font-size: 1.3rem;
+    padding: 1.5rem;
+  }
+  .fqa > div .accordion-item .accordion-body {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+    width: 90%;
+  }
+  .fqa > div .accordion-button::after {
+    top: 65%;
+    left: 0rem;
+    transform: translateY(-50%);
+    font-size: 2.1rem;
+    width: 3rem;
+    height: 100%;
+  }
+  .fqa > div .accordion-button:not(.collapsed)::after {
+    font-size: 2.5rem !important;
+  }
+}
+@media (max-width: 992px) {
+  .fqa {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .fqa .title {
+    font-size: 32px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  .fqa > div {
+    padding: 2rem;
+  }
+  .fqa > div .accordion-item {
+    margin-bottom: 1rem;
+  }
+  .fqa > div .accordion-item .accordion-button {
+    font-size: 1.2rem;
+    padding-left: 3rem;
+  }
+  .fqa > div .accordion-item .accordion-body {
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    width: 90%;
+    padding-top: 0rem;
+  }
+}
+@media (max-width: 576px) {
+  .fqa .title {
+    font-size: 20px;
+  }
+  .fqa > div .accordion-button::after {
+    top: 75%;
+    transform: translateY(-50%);
+    font-size: 1.7rem;
+    width: 2rem;
+  }
+  .fqa > div .accordion-button:not(.collapsed)::after {
+    top: 55%;
+  }
+  .fqa > div .accordion-item .accordion-button {
+    font-size: 1rem;
+  }
+  .fqa > div .accordion-item .accordion-body {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+}
+/* -------end fqa */
 /* -------start TotalRates */
+.TotalRates {
+  margin-top: 11rem;
+  margin-bottom: 9rem;
+}
 .TotalRates > div {
   margin: 5rem auto 0;
   display: flex;
@@ -631,6 +1300,10 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   height: 2rem;
 }
 @media (max-width: 1550px) {
+  .TotalRates {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+  }
   .TotalRates > div {
     margin: 4rem auto 0;
   }
@@ -680,292 +1353,6 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   }
 }
 /* -------end TotalRates */
-/* -------start CategoriesSearch */
-.CategoriesSearch {
-  margin-top: 5rem;
-  z-index: 100;
-  position: relative;
-}
-.CategoriesSearch .title {
-  font-size: 70px;
-  text-align: center;
-  color: var(--main_color);
-  text-transform: uppercase;
-  font-family: "DIN Next Arabic LIGHT";
-  font-weight: 600;
-}
-.CategoriesSearch .SearchBlock {
-  width: 85%;
-  background-color: var(--body2_color);
-  margin: 2rem auto;
-  border-radius: 0.5rem;
-  text-align: center;
-  padding: 2rem 2rem 1rem;
-}
-.CategoriesSearch .SearchBlock > p {
-  font-size: 45px;
-}
-.CategoriesSearch .SearchBlock > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  margin: 2rem auto;
-}
-.CategoriesSearch .SearchBlock > div .dropdown {
-  background-color: #ffffff;
-  width: 48%;
-  border-radius: 0.2rem;
-}
-.CategoriesSearch .SearchBlock > div .dropdown > button {
-  padding: 0.8rem 1.5rem;
-  text-align: right;
-  font-size: 20px;
-  width: 100%;
-  color: grey;
-  box-shadow: none;
-  position: relative;
-  font-family: "DIN Next Arabic regular";
-}
-
-.CategoriesSearch .SearchBlock > div .dropdown > button::after {
-  display: none;
-}
-.CategoriesSearch .SearchBlock > div .dropdown > button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 1rem;
-  transform: translateY(-50%);
-  background-image: url(../imges/arrowBottom.png);
-  width: 1.5rem;
-  background-repeat: no-repeat;
-  height: 1.5rem;
-  display: flex;
-  align-items: center;
-  background-position: center;
-  justify-content: center;
-  background-size: auto;
-}
-
-.CategoriesSearch .SearchBlock > div .dropdown .dropdown-menu {
-  width: 100%;
-}
-.CategoriesSearch .SearchBlock > div .dropdown .dropdown-menu a {
-  color: grey !important;
-  font-size: 20px;
-  text-align: right;
-}
-
-@media (max-width: 1550px) {
-  .CategoriesSearch {
-    margin-top: 4rem;
-  }
-  .CategoriesSearch .title {
-    font-size: 51px;
-  }
-  .CategoriesSearch .SearchBlock {
-    margin: 2rem auto 3rem;
-    padding: 2rem 2rem 2rem;
-  }
-
-  .CategoriesSearch .SearchBlock > p {
-    font-size: 35px;
-  }
-  .CategoriesSearch .SearchBlock > div {
-    margin: 1rem auto;
-  }
-
-  .CategoriesSearch .SearchBlock > div .dropdown > button {
-    padding: 0.6rem 1.2rem;
-    font-size: 17px;
-  }
-
-  .CategoriesSearch .SearchBlock > div .dropdown .dropdown-menu a {
-    font-size: 17px;
-  }
-}
-@media (max-width: 992px) {
-  .CategoriesSearch {
-    margin-top: 3rem;
-  }
-  .CategoriesSearch .title {
-    font-size: 30px;
-  }
-  .CategoriesSearch .SearchBlock {
-    margin: 1rem auto 2rem;
-    padding: 1rem 1rem 1rem;
-  }
-
-  .CategoriesSearch .SearchBlock > p {
-    font-size: 22px;
-  }
-
-  .CategoriesSearch .SearchBlock > div .dropdown > button {
-    padding: 0.5rem 1rem;
-    font-size: 15px;
-  }
-
-  .CategoriesSearch .SearchBlock > div .dropdown .dropdown-menu a {
-    font-size: 15px;
-  }
-}
-@media (max-width: 576px) {
-  .CategoriesSearch .SearchBlock > div {
-    display: block;
-  }
-  .CategoriesSearch .SearchBlock > div .dropdown {
-    width: 100%;
-    margin-bottom: 0.6rem;
-  }
-
-  .CategoriesSearch .title {
-    font-size: 25px;
-    margin-bottom: 2rem;
-  }
-  .CategoriesSearch .SearchBlock {
-    padding: 1rem 1rem 1rem;
-    width: 100%;
-  }
-
-  .CategoriesSearch .SearchBlock > p {
-    font-size: 19px;
-  }
-}
-/* -------end CategoriesSearch */
-/* -------start AllItems */
-.AllItems {
-  background-color: var(--body2_color);
-  border-radius: 0.8rem;
-  text-align: center;
-  padding: 4rem;
-}
-.AllItems .card {
-  background-color: var(--body3_color);
-  border-radius: 0.4rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-.AllItems .card .card-img-top {
-  position: relative;
-}
-.AllItems .card .card-img-top::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background-color: #000;
-  transition: all 0.3s ease-in-out;
-  opacity: 0.3;
-}
-.AllItems .card:hover {
-  transform: scale(1.05);
-}
-.AllItems .card:hover .card-img-top::after {
-  opacity: 0;
-}
-.AllItems .card .card-body {
-  padding: 1rem 2rem;
-}
-.AllItems .card .card-body > p {
-  font-size: 25px;
-}
-.AllItems .card .card-body > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.AllItems .card .card-body > div p {
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-}
-.AllItems .card .card-body > div p img {
-  width: auto;
-  margin-left: 0.5rem;
-}
-
-.AllItems .more {
-  position: relative;
-  width: 100%;
-  margin: 2rem 0 0;
-}
-.AllItems .more button {
-  background-color: transparent;
-  border: none;
-}
-.AllItems .more button:first-of-type {
-  animation: moving 1s ease-in-out infinite alternate;
-}
-.AllItems .more button:last-of-type {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  border: 1px solid #fff;
-  border-radius: 0.4rem;
-  padding: 0.5rem 2.5rem;
-  transition: all 0.3s ease-in-out;
-}
-.AllItems .more button:last-of-type:hover {
-  background-color: #fff;
-  color: #000;
-}
-@media (max-width: 1550px) {
-  .AllItems {
-    padding: 3rem;
-  }
-
-  .AllItems .card .card-body {
-    padding: 1rem 1rem;
-  }
-  .AllItems .card .card-body > p {
-    font-size: 18px;
-  }
-
-  .AllItems .card .card-body > div p {
-    font-size: 1rem;
-  }
-  .AllItems .card .card-body > div p img {
-    margin-right: 0.4rem;
-  }
-  .AllItems .more {
-    margin: 1rem 0 1rem;
-  }
-
-  .AllItems .more button:last-of-type {
-    border-radius: 0.3rem;
-    padding: 0.5rem 2rem;
-  }
-}
-@media (max-width: 992px) {
-  .AllItems {
-    padding: 2rem;
-  }
-
-  .AllItems .card .card-body {
-    padding: 1rem 1rem;
-  }
-  .AllItems .card .card-body > p {
-    font-size: 15px;
-  }
-
-  .AllItems .card .card-body > div p {
-    font-size: 0.8rem;
-  }
-
-  .AllItems .more button:last-of-type {
-    padding: 0.4rem 1rem;
-  }
-}
-@media (max-width: 576px) {
-}
-/* -------end AllItems */
-
 /* --------------------------------------------------------------end main */
 
 /* -------------------------------------------------------------------start footer */

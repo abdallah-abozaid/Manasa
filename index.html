@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <!-- link animate css library -->
     <link href="./css/aos.css" rel="stylesheet" />
+    <!-- icon in title link -->
+    <link rel="icon" type="image/x-icon" href="./imges/logo.png" />
   </head>
   <body>
     <div class="loading">
@@ -29,7 +31,7 @@
       <div class="container">
         <!-- First Part Of Header (NavBar) -->
         <nav class="FstHeader navbar navbar-expand-lg">
-          <a class="navbar-brand" href="/">
+          <a class="navbar-brand" href="./index.html">
             <img src="./imges/logo.png" alt="" />
           </a>
           <button
@@ -54,14 +56,35 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">Register As :</li>
               <li class="nav-item">
-                <a class="nav-link" href="./Auth_Pages/SignUpCompany.html"
-                  >Company</a
-                >
+                <a class="nav-link active" href="./index.html"
+                  >Home <span></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/NavPages/Categories.html"
+                  >Categories <span></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/NavPages/Blogs.html"
+                  >Blogs <span></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/NavPages/FQA.html"
+                  >FQA <span></span
+                ></a>
+              </li>
+              <li class="nav-item Company">
+                <a class="nav-link" href="./pages/Auth_Pages/SignUpCompany.html"
+                  >Supplier
+                </a>
               </li>
               <li class="nav-item Bayer">
-                <a class="nav-link" href="./Auth_Pages/SignUp.html">Bayer </a>
+                <a class="nav-link" href="./pages/Auth_Pages/SignUp.html"
+                  >Bayer
+                </a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -101,24 +124,30 @@
               <div class="slide swiper-slide" data-aos="zoom-in">
                 <p>
                   TOP 10,000 <span>Tur</span>key <br />
-                  Se<span>ar</span>ch a company <br />
-                  Search a Cate<span>g</span>ories
+                  <span class="smallSize">
+                    Se<span>ar</span>ch a company <br />
+                    Search a Cate<span>g</span>ories
+                  </span>
                 </p>
                 <a href="/">CONTUCT US</a>
               </div>
               <div class="slide swiper-slide" data-aos="zoom-in">
                 <p>
                   TOP 10,000 <span>Tur</span>key <br />
-                  Se<span>ar</span>ch a company <br />
-                  Search a Cate<span>g</span>ories
+                  <span class="smallSize">
+                    Se<span>ar</span>ch a company <br />
+                    Search a Cate<span>g</span>ories
+                  </span>
                 </p>
                 <a href="/">CONTUCT US</a>
               </div>
               <div class="slide swiper-slide" data-aos="zoom-in">
                 <p>
                   TOP 10,000 <span>Tur</span>key <br />
-                  Se<span>ar</span>ch a company <br />
-                  Search a Cate<span>g</span>ories
+                  <span class="smallSize">
+                    Se<span>ar</span>ch a company <br />
+                    Search a Cate<span>g</span>ories
+                  </span>
                 </p>
                 <a href="/">CONTUCT US</a>
               </div>
@@ -142,74 +171,11 @@
     </header>
     <!-- -------- -------------------------- End OF navbar (Header) ------------------ -->
     <main>
-      <!-- ------------------------------------start TotalRates  ------------------------>
-      <section class="TotalRates container" style="overflow: visible">
-        <div>
-          <div data-aos="flip-up">
-            <div>
-              <p>Total Company's</p>
-            </div>
-            <div>
-              <div>
-                <p>10K</p>
-                <p>+ 25%</p>
-              </div>
-              <div>
-                <img src="./imges/totalCompany.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div data-aos="flip-up" data-aos-delay="200">
-            <div>
-              <p>Total Visitors</p>
-            </div>
-            <div>
-              <div>
-                <p>8K</p>
-                <p>+ 25%</p>
-              </div>
-              <div>
-                <img src="./imges/totalVisitors.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div data-aos="flip-up" data-aos-delay="400" class="TotalUsers">
-            <div>
-              <p>Total Users</p>
-            </div>
-            <div>
-              <div>
-                <p>6000</p>
-                <p>+ 25%</p>
-              </div>
-              <div>
-                <div class="imgs">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ------------------------------------end TotalRates  ------------------------>
       <!-- ------------------------------------start CategoriesSearch  ------------------------>
       <section class="CategoriesSearch container" style="overflow: visible">
-        <p
-          class="title"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom"
-        >
-          Categories
-        </p>
         <div class="SearchBlock">
           <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-            Search
+            Search in Categories
           </p>
           <div>
             <div class="dropdown" data-aos="zoom-in-left">
@@ -256,6 +222,7 @@
       <!-- ------------------------------------end CategoriesSearch  ------------------------>
       <!-- ------------------------------------start AllItems  ------------------------>
       <section class="AllItems container">
+        <a href="/" data-aos="flip-up">Last Company's</a>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
           <div class="col" data-aos="fade-up" data-aos-duration="1000">
             <div class="card">
@@ -490,6 +457,309 @@
         </div>
       </section>
       <!-- ------------------------------------end AllItems  ------------------------>
+      <!-- ------------------------------------start blogs  ------------------------>
+      <section class="blogs container">
+        <p
+          class="title"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+        >
+          Blogs
+        </p>
+        <div>
+          <div data-aos="flip-down">
+            <div>
+              <img src="./imges/blog.png" alt="blog" />
+            </div>
+            <div>
+              <p>Steps to search for your company on the site</p>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+              </p>
+              <div>
+                <a href="/"
+                  >More <img src="./imges/doubleArrow.png" alt="doubleArrow"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-down">
+            <div>
+              <img src="./imges/blog.png" alt="blog" />
+            </div>
+            <div>
+              <p>Steps to search for your company on the site</p>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+              </p>
+              <div>
+                <a href="/"
+                  >More <img src="./imges/doubleArrow.png" alt="doubleArrow"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-down">
+            <div>
+              <img src="./imges/blog.png" alt="blog" />
+            </div>
+            <div>
+              <p>Steps to search for your company on the site</p>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+              </p>
+              <div>
+                <a href="/"
+                  >More <img src="./imges/doubleArrow.png" alt="doubleArrow"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-down">
+            <div>
+              <img src="./imges/blog.png" alt="blog" />
+            </div>
+            <div>
+              <p>Steps to search for your company on the site</p>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+              </p>
+              <div>
+                <a href="/"
+                  >More <img src="./imges/doubleArrow.png" alt="doubleArrow"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <button data-aos="fade-up">Load More</button>
+        </div>
+      </section>
+      <!-- ------------------------------------end blogs  ------------------------>
+      <!-- ------------------------------------start fqa  ------------------------>
+      <section class="fqa container">
+        <p
+          class="title"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+        >
+          FQA
+        </p>
+        <div>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa1"
+                  aria-expanded="true"
+                  aria-controls="fqa1"
+                >
+                  How is the way to work with you?
+                </button>
+              </h2>
+              <div
+                id="fqa1"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa2"
+                  aria-expanded="false"
+                  aria-controls="fqa2"
+                >
+                  How is the way to work with you?
+                </button>
+              </h2>
+              <div
+                id="fqa2"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa3"
+                  aria-expanded="false"
+                  aria-controls="fqa3"
+                >
+                  How is the way to work with you?
+                </button>
+              </h2>
+              <div
+                id="fqa3"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa4"
+                  aria-expanded="false"
+                  aria-controls="fqa4"
+                >
+                  How is the way to work with you?
+                </button>
+              </h2>
+              <div
+                id="fqa4"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa5"
+                  aria-expanded="false"
+                  aria-controls="fqa5"
+                >
+                  How is the way to work with you?
+                </button>
+              </h2>
+              <div
+                id="fqa5"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa6"
+                  aria-expanded="false"
+                  aria-controls="fqa6"
+                >
+                  How is the way to work with you?
+                </button>
+              </h2>
+              <div
+                id="fqa6"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------end fqa  ------------------------>
+      <!-- ------------------------------------start TotalRates  ------------------------>
+      <section class="TotalRates container" style="overflow: visible">
+        <div>
+          <div data-aos="flip-up">
+            <div>
+              <p>Total Company's</p>
+            </div>
+            <div>
+              <div>
+                <p>10K</p>
+                <p>+ 25%</p>
+              </div>
+              <div>
+                <img src="./imges/totalCompany.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-up" data-aos-delay="200">
+            <div>
+              <p>Total Visitors</p>
+            </div>
+            <div>
+              <div>
+                <p>8K</p>
+                <p>+ 25%</p>
+              </div>
+              <div>
+                <img src="./imges/totalVisitors.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-up" data-aos-delay="400" class="TotalUsers">
+            <div>
+              <p>Total Users</p>
+            </div>
+            <div>
+              <div>
+                <p>6000</p>
+                <p>+ 25%</p>
+              </div>
+              <div>
+                <div class="imgs">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------end TotalRates  ------------------------>
     </main>
     <!-- ------------------------------------start Footer ------------------------>
     <footer>

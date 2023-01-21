@@ -29,7 +29,7 @@
       <div class="container">
         <!-- First Part Of Header (NavBar) -->
         <nav class="FstHeader navbar navbar-expand-lg">
-          <a class="navbar-brand me-0" href="/">
+          <a class="navbar-brand" href="./index_ar.html">
             <img src="./imges/logo.png" alt="" />
           </a>
           <button
@@ -54,18 +54,38 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">سجل ك :</li>
               <li class="nav-item">
-                <a class="nav-link" href="./Auth_Pages/SignUpCompany_ar.html"
-                  >شركة</a
-                >
+                <a class="nav-link active" href="./index_ar.html"
+                  >الرئيسيه <span></span
+                ></a>
               </li>
-              <li class="nav-item Bayer">
-                <a class="nav-link" href="./Auth_Pages/SignUp_ar.html"
-                  >مشتري
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/NavPages/Categories_ar.html"
+                  >التصنيفات <span></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/NavPages/Blogs_ar.html"
+                  >المدونات <span></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/NavPages/FQA_ar.html"
+                  >أسئله شائعه <span></span
+                ></a>
+              </li>
+              <li class="nav-item Company">
+                <a
+                  class="nav-link"
+                  href="./pages/Auth_Pages/SignUpCompany_ar.html"
+                  >المورد
                 </a>
               </li>
-
+              <li class="nav-item Bayer">
+                <a class="nav-link" href="./pages/Auth_Pages/SignUp_ar.html"
+                  >بائع
+                </a>
+              </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -79,13 +99,13 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="langDropdown">
                   <li>
-                    <a class="dropdown-item" href="./index.html">الإنجليزيه</a>
+                    <a class="dropdown-item" href="./index.html"> الانجليزية</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="./index_ar.html">العربيه</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./index_tr.html">التركية</a>
+                    <a class="dropdown-item" href="./index_tr.html">التركيه</a>
                   </li>
                 </ul>
               </li>
@@ -145,6 +165,551 @@
     </header>
     <!-- -------- -------------------------- End OF navbar (Header) ------------------ -->
     <main>
+      <!-- ------------------------------------start CategoriesSearch  ------------------------>
+      <section class="CategoriesSearch container" style="overflow: visible">
+        <div class="SearchBlock">
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+            بحث في الفئات
+          </p>
+          <div>
+            <div class="dropdown" data-aos="zoom-in-right">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="dropdownCity"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                تحديد فئة
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownCity">
+                <li><a class="dropdown-item" href="#">الكل</a></li>
+                <li><a class="dropdown-item" href="#">مدينه1</a></li>
+                <li><a class="dropdown-item" href="#">مدينه2</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">مدينه3</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown" data-aos="zoom-in-left">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="dropdowncategroy"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                تحديد المدينة
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdowncategroy">
+                <li><a class="dropdown-item" href="#">الكل</a></li>
+                <li><a class="dropdown-item" href="#">فئه1</a></li>
+                <li><a class="dropdown-item" href="#">فئه2</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">فئه3</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------end CategoriesSearch  ------------------------>
+      <!-- ------------------------------------start AllItems  ------------------------>
+      <section class="AllItems container">
+        <a href="/" data-aos="flip-up">آخر الشركات</a>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="./imges/item.png" alt="item" />
+              </div>
+              <div class="card-body">
+                <p>شركة الماجد</p>
+                <div>
+                  <p><img src="./imges/location.png" alt="" /> اسطنبول</p>
+                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="more">
+          <button>
+            <img src="./imges/doubleArrow.png" alt="doubleArrow" />
+          </button>
+          <button data-aos="fade-left" data-aos-duration="500">
+            مشاهدة الكل
+          </button>
+        </div>
+      </section>
+      <!-- ------------------------------------end AllItems  ------------------------>
+      <!-- ------------------------------------start blogs  ------------------------>
+      <section class="blogs container">
+        <p
+          class="title"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+        >
+          المدونات
+        </p>
+        <div>
+          <div data-aos="flip-down">
+            <div>
+              <img src="./imges/blog.png" alt="blog" />
+            </div>
+            <div>
+              <p>خطوات البحث عن شركتك في الموقع</p>
+              <p>
+                هذا النص يمكنك استبداله باي نص اخر ترغب به , هذا النص يمكنك
+                استبداله باي نص اخر ترغب به هذا النص يمكنك استبداله باي نص اخر
+                ترغب به
+              </p>
+              <div>
+                <a href="/"
+                  >المزيد <img src="./imges/doubleArrow.png" alt="doubleArrow"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-down">
+            <div>
+              <img src="./imges/blog.png" alt="blog" />
+            </div>
+            <div>
+              <p>خطوات البحث عن شركتك في الموقع</p>
+              <p>
+                هذا النص يمكنك استبداله باي نص اخر ترغب به , هذا النص يمكنك
+                استبداله باي نص اخر ترغب به هذا النص يمكنك استبداله باي نص اخر
+                ترغب به
+              </p>
+              <div>
+                <a href="/"
+                  >المزيد <img src="./imges/doubleArrow.png" alt="doubleArrow"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-down">
+            <div>
+              <img src="./imges/blog.png" alt="blog" />
+            </div>
+            <div>
+              <p>خطوات البحث عن شركتك في الموقع</p>
+              <p>
+                هذا النص يمكنك استبداله باي نص اخر ترغب به , هذا النص يمكنك
+                استبداله باي نص اخر ترغب به هذا النص يمكنك استبداله باي نص اخر
+                ترغب به
+              </p>
+              <div>
+                <a href="/"
+                  >المزيد <img src="./imges/doubleArrow.png" alt="doubleArrow"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div data-aos="flip-down">
+            <div>
+              <img src="./imges/blog.png" alt="blog" />
+            </div>
+            <div>
+              <p>خطوات البحث عن شركتك في الموقع</p>
+              <p>
+                هذا النص يمكنك استبداله باي نص اخر ترغب به , هذا النص يمكنك
+                استبداله باي نص اخر ترغب به هذا النص يمكنك استبداله باي نص اخر
+                ترغب به
+              </p>
+              <div>
+                <a href="/"
+                  >المزيد <img src="./imges/doubleArrow.png" alt="doubleArrow"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <button data-aos="fade-up">تحميل المزيد</button>
+        </div>
+      </section>
+      <!-- ------------------------------------end blogs  ------------------------>
+      <!-- ------------------------------------start fqa  ------------------------>
+      <section class="fqa container">
+        <p
+          class="title"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+        >
+          أسئاله شائعه
+        </p>
+        <div>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa1"
+                  aria-expanded="true"
+                  aria-controls="fqa1"
+                >
+                  كيف هي طريقة العمل معك؟
+                </button>
+              </h2>
+              <div
+                id="fqa1"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  هذا النص يمكنك استبداله باي نص اخر ترغب به , هذا النص يمكنك
+                  استبداله باي نص اخر ترغب به هذا النص يمكنك استبداله باي نص اخر
+                  ترغب به
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa2"
+                  aria-expanded="false"
+                  aria-controls="fqa2"
+                >
+                  كيف هي طريقة العمل معك؟
+                </button>
+              </h2>
+              <div
+                id="fqa2"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  هذا النص يمكنك استبداله باي نص اخر ترغب به , هذا النص يمكنك
+                  استبداله باي نص اخر ترغب به هذا النص يمكنك استبداله باي نص اخر
+                  ترغب به
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa3"
+                  aria-expanded="false"
+                  aria-controls="fqa3"
+                >
+                  كيف هي طريقة العمل معك؟
+                </button>
+              </h2>
+              <div
+                id="fqa3"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  هذا النص يمكنك استبداله باي نص اخر ترغب به , هذا النص يمكنك
+                  استبداله باي نص اخر ترغب به هذا النص يمكنك استبداله باي نص اخر
+                  ترغب به
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa4"
+                  aria-expanded="false"
+                  aria-controls="fqa4"
+                >
+                  كيف هي طريقة العمل معك؟
+                </button>
+              </h2>
+              <div
+                id="fqa4"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  هذا النص يمكنك استبداله باي نص اخر ترغب به , هذا النص يمكنك
+                  استبداله باي نص اخر ترغب به هذا النص يمكنك استبداله باي نص اخر
+                  ترغب به
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa5"
+                  aria-expanded="false"
+                  aria-controls="fqa5"
+                >
+                  كيف هي طريقة العمل معك؟
+                </button>
+              </h2>
+              <div
+                id="fqa5"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  هذا النص يمكنك استبداله باي نص اخر ترغب به , هذا النص يمكنك
+                  استبداله باي نص اخر ترغب به هذا النص يمكنك استبداله باي نص اخر
+                  ترغب به
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-aos="zoom-in-down">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fqa6"
+                  aria-expanded="false"
+                  aria-controls="fqa6"
+                >
+                  كيف هي طريقة العمل معك؟
+                </button>
+              </h2>
+              <div
+                id="fqa6"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  هذا النص يمكنك استبداله باي نص اخر ترغب به , هذا النص يمكنك
+                  استبداله باي نص اخر ترغب به هذا النص يمكنك استبداله باي نص اخر
+                  ترغب به
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------end fqa  ------------------------>
       <!-- ------------------------------------start TotalRates  ------------------------>
       <section class="TotalRates container" style="overflow: visible">
         <div>
@@ -201,300 +766,6 @@
         </div>
       </section>
       <!-- ------------------------------------end TotalRates  ------------------------>
-      <!-- ------------------------------------start CategoriesSearch  ------------------------>
-      <section class="CategoriesSearch container" style="overflow: visible">
-        <p
-          class="title"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom"
-        >
-          التصنيفات
-        </p>
-        <div class="SearchBlock">
-          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-            بحث
-          </p>
-          <div>
-            <div class="dropdown" data-aos="zoom-in-right">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                id="dropdownCity"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                تحديد فئة
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownCity">
-                <li><a class="dropdown-item" href="#">الكل</a></li>
-                <li><a class="dropdown-item" href="#">مدينه1</a></li>
-                <li><a class="dropdown-item" href="#">مدينه2</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">مدينه3</a>
-                </li>
-              </ul>
-            </div>
-            <div class="dropdown" data-aos="zoom-in-left">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                id="dropdowncategroy"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                تحديد المدينة
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdowncategroy">
-                <li><a class="dropdown-item" href="#">الكل</a></li>
-                <li><a class="dropdown-item" href="#">فئه1</a></li>
-                <li><a class="dropdown-item" href="#">فئه2</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">فئه3</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ------------------------------------end CategoriesSearch  ------------------------>
-      <!-- ------------------------------------start AllItems  ------------------------>
-      <section class="AllItems container">
-        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card">
-              <div class="card-img-top">
-                <img src="./imges/item.png" alt="item" />
-              </div>
-              <div class="card-body">
-                <p>Al Majed Campany</p>
-                <div>
-                  <p><img src="./imges/location.png" alt="" /> Istanbul</p>
-                  <p><img src="./imges/calender.png" alt="" /> 1986</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="more">
-          <button>
-            <img src="./imges/doubleArrow.png" alt="doubleArrow" />
-          </button>
-          <button data-aos="fade-left" data-aos-duration="500">
-            مشاهدة الكل
-          </button>
-        </div>
-      </section>
-      <!-- ------------------------------------end AllItems  ------------------------>
     </main>
     <!-- ------------------------------------start Footer ------------------------>
     <footer>
