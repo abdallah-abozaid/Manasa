@@ -40,6 +40,7 @@ body {
 body {
   position: relative;
   background-color: var(--body_color);
+  direction: ltr;
 }
 
 section {
@@ -305,7 +306,7 @@ header .SecHeader {
 header .SecHeader > div.HeaderSwiper {
   overflow: hidden;
   text-align: center;
-  direction: rtl;
+  direction: ltr;
 }
 header .SecHeader > div.HeaderSwiper .swiper-slide p {
   font-size: 80px;
@@ -318,17 +319,30 @@ header .SecHeader > div.HeaderSwiper .swiper-slide p span.smallSize {
   color: unset;
   font-size: 70px;
 }
-header .SecHeader > div.HeaderSwiper .swiper-slide a {
+header .SecHeader .btns input.search {
+  color: var(--main_color);
+  text-align: left;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  min-width: 15rem;
+  background-color: #fff;
+  margin: 0 0.6rem;
+  font-size: 25px;
+}
+header .SecHeader .btns a {
   background-color: var(--main_color);
   padding: 0.5rem 2rem;
   border-radius: 0.3rem;
+  margin: 0 0.6rem;
   font-size: 25px;
   margin-top: 1rem;
   display: inline-block;
   margin-bottom: 4rem;
   font-family: "DIN Next Arabic LIGHT";
 }
-header .SecHeader > div.HeaderSwiper .swiper-slide a:hover {
+header .SecHeader .btns a:hover {
   animation: wiggle 2s linear infinite;
 }
 header .SecHeader > div.HeaderSwiper .swiperBtn button {
@@ -384,10 +398,6 @@ header .outer p {
   height: 1.1rem;
 }
 
-/* for language swiper */
-header .SecHeader > div.HeaderSwiper .swiperBtn button {
-  transform: rotate(180deg);
-}
 /* ------------------ */
 @media (max-width: 1550px) {
   header .navbar-brand img {
@@ -425,9 +435,12 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   header .SecHeader > div.HeaderSwiper .swiper-slide p span.smallSize {
     font-size: 45px;
   }
-  header .SecHeader > div.HeaderSwiper .swiper-slide a {
+  header .SecHeader .btns a {
     font-size: 1rem;
-    margin-bottom: 4rem;
+    margin-top: 0.5rem;
+  }
+  header .SecHeader .btns input.search {
+    font-size: 1rem;
     margin-top: 0.5rem;
   }
 
@@ -484,10 +497,16 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   header .SecHeader > div.HeaderSwiper .swiper-slide p span.smallSize {
     font-size: 27px;
   }
-  header .SecHeader > div.HeaderSwiper .swiper-slide a {
+  header .SecHeader .btns a {
     font-size: 0.9rem;
-    margin-top: 0rem;
-    margin-bottom: 3rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+  }
+
+  header .SecHeader .btns input.search {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 0.3rem;
   }
@@ -495,6 +514,7 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
     width: 2rem;
     height: 2rem;
     border-radius: 0.1rem;
+    top: 45%;
   }
   header .outer {
     width: 95%;
@@ -561,10 +581,14 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   header .SecHeader > div.HeaderSwiper .swiper-slide p span.smallSize {
     font-size: 19px;
   }
-  header .SecHeader > div.HeaderSwiper .swiper-slide a {
+  header .SecHeader .btns {
+    display: block;
+  }
+  header .SecHeader .btns a,
+  .SecHeader .btns input {
     font-size: 13px;
-    margin-top: 0.5rem;
-    margin-bottom: 5rem;
+    margin: 0.5rem auto;
+    width: 80%;
   }
   header .SecHeader > div.HeaderSwiper .swiperBtn button {
     width: 2rem;
@@ -1081,12 +1105,12 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   }
 }
 /* -------end blogs */
-/* -------start fqa */
-.fqa {
+/* -------start FAQ */
+.FAQ {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
-.fqa .title {
+.FAQ .title {
   font-size: 60px;
   color: var(--main_color);
   text-transform: uppercase;
@@ -1096,19 +1120,19 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   margin-bottom: 4rem;
   text-align: center;
 }
-.fqa > div {
+.FAQ > div {
   background-color: var(--body2_color);
   border-radius: 2rem;
   padding: 4rem;
 }
-.fqa > div .accordion-item {
+.FAQ > div .accordion-item {
   background-color: transparent;
   border: 2px solid grey;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.fqa > div .accordion-item .accordion-button {
+.FAQ > div .accordion-item .accordion-button {
   background-color: transparent;
   color: #fff;
   font-size: 1.7rem;
@@ -1117,7 +1141,7 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   padding: 2.5rem;
   padding-right: 4rem;
 }
-.fqa > div .accordion-item .accordion-body {
+.FAQ > div .accordion-item .accordion-body {
   background-color: transparent;
   color: #fff;
   font-size: 1.4rem;
@@ -1127,7 +1151,7 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   padding-top: 0;
   width: 80%;
 }
-.fqa > div .accordion-button::after {
+.FAQ > div .accordion-button::after {
   position: absolute;
   top: 50%;
   right: 1rem;
@@ -1138,39 +1162,39 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   width: 3rem;
   height: 70%;
 }
-.fqa > div .accordion-button:not(.collapsed)::after {
+.FAQ > div .accordion-button:not(.collapsed)::after {
   content: "-" !important;
   font-size: 3.5rem !important;
 }
 @media (max-width: 1550px) {
-  .fqa {
+  .FAQ {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  .fqa .title {
+  .FAQ .title {
     font-size: 37px;
     margin-top: 4rem;
     margin-bottom: 2rem;
   }
-  .fqa > div {
+  .FAQ > div {
     border-radius: 1rem;
     padding: 3rem;
   }
-  .fqa > div .accordion-item {
+  .FAQ > div .accordion-item {
     border: 1px solid grey;
     margin-bottom: 1.5rem;
     border-radius: 0.6rem;
   }
-  .fqa > div .accordion-item .accordion-button {
+  .FAQ > div .accordion-item .accordion-button {
     font-size: 1.3rem;
     padding: 1.5rem;
   }
-  .fqa > div .accordion-item .accordion-body {
+  .FAQ > div .accordion-item .accordion-body {
     font-size: 1.1rem;
     padding: 1.5rem;
     width: 90%;
   }
-  .fqa > div .accordion-button::after {
+  .FAQ > div .accordion-button::after {
     top: 65%;
     right: 0rem;
     transform: translateY(-50%);
@@ -1178,31 +1202,31 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
     width: 3rem;
     height: 100%;
   }
-  .fqa > div .accordion-button:not(.collapsed)::after {
+  .FAQ > div .accordion-button:not(.collapsed)::after {
     font-size: 2.5rem !important;
   }
 }
 @media (max-width: 992px) {
-  .fqa {
+  .FAQ {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-  .fqa .title {
+  .FAQ .title {
     font-size: 32px;
     margin-top: 3rem;
     margin-bottom: 1rem;
   }
-  .fqa > div {
+  .FAQ > div {
     padding: 2rem;
   }
-  .fqa > div .accordion-item {
+  .FAQ > div .accordion-item {
     margin-bottom: 1rem;
   }
-  .fqa > div .accordion-item .accordion-button {
+  .FAQ > div .accordion-item .accordion-button {
     font-size: 1.2rem;
     padding-right: 3rem;
   }
-  .fqa > div .accordion-item .accordion-body {
+  .FAQ > div .accordion-item .accordion-body {
     font-size: 0.9rem;
     padding: 1.5rem;
     width: 90%;
@@ -1210,27 +1234,27 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   }
 }
 @media (max-width: 576px) {
-  .fqa .title {
+  .FAQ .title {
     font-size: 20px;
   }
-  .fqa > div .accordion-button::after {
+  .FAQ > div .accordion-button::after {
     top: 75%;
     transform: translateY(-50%);
     font-size: 1.7rem;
     width: 2rem;
   }
-  .fqa > div .accordion-button:not(.collapsed)::after {
+  .FAQ > div .accordion-button:not(.collapsed)::after {
     top: 55%;
   }
-  .fqa > div .accordion-item .accordion-button {
+  .FAQ > div .accordion-item .accordion-button {
     font-size: 1rem;
   }
-  .fqa > div .accordion-item .accordion-body {
+  .FAQ > div .accordion-item .accordion-body {
     font-size: 0.8rem;
     width: 100%;
   }
 }
-/* -------end fqa */
+/* -------end FAQ */
 /* -------start TotalRates */
 .TotalRates {
   margin-top: 11rem;

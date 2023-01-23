@@ -40,6 +40,7 @@ body {
 body {
   position: relative;
   background-color: var(--body_color);
+  direction: rtl;
 }
 
 section {
@@ -207,7 +208,7 @@ img {
   }
 }
 .dropdown .dropdown-item {
-  text-align: left;
+  text-align: right;
   color: grey !important;
   font-family: "DIN Next Arabic regular";
 }
@@ -256,7 +257,7 @@ header .FstHeader .navbar-nav li a {
 header .FstHeader .navbar-nav li a > span {
   position: absolute;
   bottom: -0.3rem;
-  left: 0;
+  right: 0;
   width: 0%;
   height: 0.11rem;
   background-color: var(--main_color);
@@ -269,7 +270,7 @@ header .FstHeader .navbar-nav li a.active > span {
   width: 100%;
 }
 header .FstHeader .navbar-nav > li.Company a {
-  margin-left: 2rem;
+  margin-right: 2rem;
   padding: 0.2rem 1rem 0.4rem !important;
   font-family: "DIN Next Arabic LIGHT";
   border-radius: 0.2rem;
@@ -312,7 +313,7 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   }
 
   header .FstHeader .navbar-nav > li.Company a {
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   header .FstHeader .navbar-nav > li.Bayer > a {
@@ -352,7 +353,7 @@ header .FstHeader .navbar-nav > li:last-of-type img {
     margin-top: 1rem;
   }
   header .FstHeader .navbar-nav > li.Company a {
-    margin-left: 0rem;
+    margin-right: 0rem;
   }
   header .FstHeader .navbar-nav li a > span {
     bottom: -0.1rem;
@@ -366,12 +367,11 @@ header .FstHeader .navbar-nav > li:last-of-type img {
 /* ------------------------------------------------------------end header */
 
 /* --------------------------------------------------------------start main */
-
-/* -------start fqa */
-.fqa {
+/* -------start FAQ */
+.FAQ {
   margin-bottom: 5rem;
 }
-.fqa .title {
+.FAQ .title {
   font-size: 60px;
   color: var(--main_color);
   text-transform: uppercase;
@@ -381,28 +381,28 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   margin-bottom: 10rem;
   text-align: center;
 }
-.fqa > div {
+.FAQ > div {
   background-color: var(--body2_color);
   border-radius: 2rem;
   padding: 4rem;
 }
-.fqa > div .accordion-item {
+.FAQ > div .accordion-item {
   background-color: transparent;
   border: 2px solid grey;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.fqa > div .accordion-item .accordion-button {
+.FAQ > div .accordion-item .accordion-button {
   background-color: transparent;
   color: #fff;
   font-size: 1.7rem;
   box-shadow: none;
   position: relative;
   padding: 2.5rem;
-  padding-right: 4rem;
+  padding-left: 4rem;
 }
-.fqa > div .accordion-item .accordion-body {
+.FAQ > div .accordion-item .accordion-body {
   background-color: transparent;
   color: #fff;
   font-size: 1.4rem;
@@ -412,10 +412,10 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   padding-top: 0;
   width: 80%;
 }
-.fqa > div .accordion-button::after {
+.FAQ > div .accordion-button::after {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  left: 1rem;
   transform: translateY(-50%);
   content: "+";
   background-image: none;
@@ -423,71 +423,68 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   width: 3rem;
   height: 70%;
 }
-.fqa > div .accordion-button:not(.collapsed)::after {
+.FAQ > div .accordion-button:not(.collapsed)::after {
   content: "-" !important;
   font-size: 3.5rem !important;
 }
 @media (max-width: 1550px) {
-  .fqa {
-    margin-top: 2rem;
+  .FAQ {
     margin-bottom: 2rem;
   }
-  .fqa .title {
+  .FAQ .title {
     font-size: 37px;
     margin-top: 4rem;
     margin-bottom: 2rem;
   }
-  .fqa > div {
+  .FAQ > div {
     border-radius: 1rem;
     padding: 3rem;
   }
-  .fqa > div .accordion-item {
+  .FAQ > div .accordion-item {
     border: 1px solid grey;
     margin-bottom: 1.5rem;
     border-radius: 0.6rem;
   }
-  .fqa > div .accordion-item .accordion-button {
+  .FAQ > div .accordion-item .accordion-button {
     font-size: 1.3rem;
     padding: 1.5rem;
   }
-  .fqa > div .accordion-item .accordion-body {
+  .FAQ > div .accordion-item .accordion-body {
     font-size: 1.1rem;
     padding: 1.5rem;
     width: 90%;
   }
-  .fqa > div .accordion-button::after {
+  .FAQ > div .accordion-button::after {
     top: 65%;
-    right: 0rem;
     transform: translateY(-50%);
     font-size: 2.1rem;
     width: 3rem;
     height: 100%;
   }
-  .fqa > div .accordion-button:not(.collapsed)::after {
+  .FAQ > div .accordion-button:not(.collapsed)::after {
     font-size: 2.5rem !important;
   }
 }
 @media (max-width: 992px) {
-  .fqa {
-    margin-top: 1rem;
+  .FAQ {
     margin-bottom: 1rem;
   }
-  .fqa .title {
+  .FAQ .title {
     font-size: 32px;
     margin-top: 3rem;
     margin-bottom: 1rem;
   }
-  .fqa > div {
+  .FAQ > div {
     padding: 2rem;
   }
-  .fqa > div .accordion-item {
+  .FAQ > div .accordion-item {
     margin-bottom: 1rem;
   }
-  .fqa > div .accordion-item .accordion-button {
+  .FAQ > div .accordion-item .accordion-button {
     font-size: 1.2rem;
-    padding-right: 3rem;
+    padding-left: 3rem;
   }
-  .fqa > div .accordion-item .accordion-body {
+  .FAQ > div .accordion-item .accordion-body {
     font-size: 0.9rem;
     padding: 1.5rem;
     width: 90%;
@@ -495,27 +492,27 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   }
 }
 @media (max-width: 576px) {
-  .fqa .title {
+  .FAQ .title {
     font-size: 20px;
   }
-  .fqa > div .accordion-button::after {
+  .FAQ > div .accordion-button::after {
     top: 75%;
     transform: translateY(-50%);
     font-size: 1.7rem;
     width: 2rem;
   }
-  .fqa > div .accordion-button:not(.collapsed)::after {
+  .FAQ > div .accordion-button:not(.collapsed)::after {
     top: 55%;
   }
-  .fqa > div .accordion-item .accordion-button {
+  .FAQ > div .accordion-item .accordion-button {
     font-size: 1rem;
   }
-  .fqa > div .accordion-item .accordion-body {
+  .FAQ > div .accordion-item .accordion-body {
     font-size: 0.8rem;
     width: 100%;
   }
 }
-/* -------end fqa */
+/* -------end FAQ */
 
 /* --------------------------------------------------------------end main */
 
@@ -530,7 +527,7 @@ footer .FstFooter img {
 }
 footer .FstFooter > div > div > div:first-of-type p {
   font-size: 26px;
-  padding-right: 5rem;
+  padding-left: 5rem;
   font-family: "DIN Next Arabic LIGHT";
   line-height: 3rem;
 }
@@ -546,7 +543,7 @@ footer .FstFooter > div > div > div:nth-of-type(2) > div {
   justify-content: flex-start;
 }
 footer .FstFooter > div > div > div:nth-of-type(2) > div a {
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 footer .FstFooter > div > div > div:nth-of-type(2) > div a svg {
   transition: all 0.3s ease-in-out;
@@ -604,7 +601,7 @@ footer .FstFooter > div > div > div:nth-of-type(3) ul li {
   font-size: 20px;
 }
 footer .FstFooter > div > div > div:nth-of-type(3) ul li img {
-  margin-right: 0.6rem;
+  margin-left: 0.6rem;
 }
 
 footer .SecFooter {
@@ -622,7 +619,7 @@ footer .SecFooter {
 
   footer .FstFooter > div > div > div:first-of-type p {
     font-size: 17px;
-    padding-right: 2rem;
+    padding-left: 2rem;
     line-height: 2.5rem;
   }
 
@@ -633,12 +630,11 @@ footer .SecFooter {
   }
 
   footer .FstFooter > div > div > div:nth-of-type(2) > div a {
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
   footer .FstFooter > div > div > div:nth-of-type(2) > div a svg {
     width: 1.8rem;
   }
-
   footer .FstFooter > div > div > div:nth-of-type(3) ul li {
     margin-bottom: 0.7rem;
     font-size: 17px;
@@ -657,7 +653,7 @@ footer .SecFooter {
 
   footer .FstFooter > div > div > div:first-of-type p {
     font-size: 15px;
-    padding-right: 0rem;
+    padding-left: 0rem;
     line-height: 2rem;
   }
 
@@ -671,7 +667,7 @@ footer .SecFooter {
     font-size: 15px;
   }
   footer .FstFooter > div > div > div:nth-of-type(3) ul li img {
-    margin-right: 0.4rem;
+    margin-left: 0.4rem;
   }
 
   footer .SecFooter {
