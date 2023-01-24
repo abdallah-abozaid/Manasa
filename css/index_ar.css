@@ -278,7 +278,6 @@ header .FstHeader .navbar-nav li a.active > span {
   width: 100%;
 }
 header .FstHeader .navbar-nav > li.Company a {
-  margin-right: 2rem;
   padding: 0.2rem 1rem 0.4rem !important;
   font-family: "DIN Next Arabic LIGHT";
   border-radius: 0.2rem;
@@ -316,17 +315,21 @@ header .SecHeader > div.HeaderSwiper .swiper-slide p {
 header .SecHeader > div.HeaderSwiper .swiper-slide p span {
   color: var(--main_color);
 }
-header .SecHeader .btns input.search {
-  color: var(--main_color);
+header .search input {
   text-align: right;
-  padding: 0.5rem;
+  padding: 0.65rem;
   border-radius: 0.3rem;
   outline: none;
   border: none;
-  background-color: #fff;
-  margin: 0 0.6rem;
-  font-size: 25px;
   min-width: 15rem;
+  background-color: var(--body_color);
+  color: #fff;
+  border: 1px solid grey;
+  font-size: 1rem;
+  margin-right: 2rem;
+}
+header .search input::placeholder {
+  color: #ccc;
 }
 header .SecHeader .btns a {
   background-color: var(--main_color);
@@ -401,6 +404,14 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
 }
 /* ------------------ */
 @media (max-width: 1550px) {
+  header .navbar-brand img {
+    width: 14rem;
+  }
+  header .search input {
+    min-width: 6rem;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
   header .FstHeader {
     padding-top: 1rem;
   }
@@ -410,33 +421,26 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
     font-size: 1rem;
   }
   header .FstHeader .navbar-nav li {
-    margin: 0.7rem;
+    margin: 0.5rem;
   }
   header .FstHeader .navbar-nav li a {
     font-size: 1rem;
   }
 
-  header .FstHeader .navbar-nav > li.Company a {
-    margin-right: 1rem;
-  }
-
   header .FstHeader .navbar-nav > li.Bayer > a {
-    min-width: 6rem;
+    min-width: 5rem;
   }
 
   header .SecHeader > div.HeaderSwiper .swiper-slide p {
-    font-size: 45px;
-    line-height: 4.5rem;
+    font-size: 35px;
+    line-height: 4rem;
   }
 
   header .SecHeader .btns a {
     font-size: 1rem;
     margin-top: 0.5rem;
   }
-  header .SecHeader .btns input.search {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-  }
+
   header .SecHeader > div.HeaderSwiper .swiperBtn button {
     width: 3rem;
     height: 2.5rem;
@@ -460,81 +464,23 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   }
 }
 @media (max-width: 992px) {
-  header {
-    height: unset !important;
+  .FstHeader {
+    direction: rtl !important;
   }
-  header .container {
-    height: unset !important;
-  }
-  header .navbar-nav {
-    justify-content: center;
-    flex-direction: unset;
-    padding: 0;
-  }
-  header .FstHeader .navbar-nav li {
-    margin: 0 0.5rem 0;
-  }
-  header .FstHeader .navbar-nav li a {
-    font-size: 17px;
-  }
-
-  header .SecHeader {
-    height: auto;
-  }
-
-  header .SecHeader > div.HeaderSwiper .swiper-slide p {
-    font-size: 25px;
-    line-height: 2.6rem;
-  }
-
-  header .SecHeader .btns a {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.3rem;
-  }
-
-  header .SecHeader .btns input.search {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.3rem;
-  }
-  header .SecHeader > div.HeaderSwiper .swiperBtn button {
-    width: 2.5rem;
-    height: 2rem;
-    border-radius: 0.1rem;
-    top: 40%;
-  }
-  header .outer {
-    width: 95%;
-  }
-
-  header .outer p {
-    font-size: 15px;
-  }
-
-  .swiper-pagination span {
-    width: 0.5rem;
-    margin-bottom: 0.5rem !important;
-    height: 0.5rem;
-  }
-  .swiper-pagination .swiper-pagination-bullet-active {
-    width: 0.9rem;
-    height: 0.9rem;
-  }
-}
-@media (max-width: 576px) {
   header .navbar-brand img {
-    width: 11rem;
+    width: 15rem;
+  }
+  header .search input {
+    margin: 0;
+    width: 50%;
   }
   header .container,
   header {
-    height: 100vh !important;
+    height: auto !important;
     background-size: 100% 100%;
   }
   header .SecHeader {
-    height: 80vh;
+    height: auto;
   }
 
   header .navbar-nav {
@@ -549,40 +495,41 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
     width: 100%;
     margin-bottom: 0.5rem;
   }
+
   header .FstHeader .navbar-nav li:last-of-type {
     margin-top: 1rem;
   }
   header .FstHeader .navbar-nav > li.Company a {
-    margin-right: 0rem;
+    margin-left: 0rem;
   }
   header .FstHeader .navbar-nav li a > span {
     bottom: -0.1rem;
     height: 0.1rem;
   }
   header .FstHeader .navbar-nav li a {
-    font-size: 15px;
+    font-size: 1rem;
   }
 
   header .SecHeader > div.HeaderSwiper .swiper-slide p {
-    font-size: 20px;
+    font-size: 35px;
     line-height: 2.2rem;
     margin-bottom: 0.5rem;
+    margin-top: 4rem;
   }
   header .SecHeader > div.HeaderSwiper .swiper-slide p span.smallSize {
-    font-size: 19px;
+    font-size: 30px;
   }
   header .SecHeader .btns {
     display: block;
+    margin-bottom: 8rem;
   }
-  header .SecHeader .btns a,
-  .SecHeader .btns input {
-    font-size: 13px;
+  header .SecHeader .btns a {
+    font-size: 0.95rem;
     margin: 0.5rem auto;
-    width: 80%;
+    width: auto;
   }
   header .SecHeader > div.HeaderSwiper .swiperBtn button {
     width: 2rem;
-    top: 45%;
   }
   header .outer {
     width: 90%;
@@ -596,7 +543,26 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
     height: 0.8rem;
   }
 }
+@media (max-width: 576px) {
+  header .search input {
+    width: 90%;
+  }
+  header .navbar-brand img {
+    width: 11rem;
+  }
 
+  header .SecHeader > div.HeaderSwiper .swiper-slide p {
+    font-size: 22px;
+    margin-top: 3rem;
+  }
+  header .SecHeader > div.HeaderSwiper .swiper-slide p span.smallSize {
+    font-size: 20px;
+  }
+  header .SecHeader .btns {
+    display: block;
+    margin-bottom: 5rem;
+  }
+}
 /* ------------------------------------------------------------end header */
 
 /* --------------------------------------------------------------start main */
@@ -759,15 +725,14 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   text-align: center;
   padding: 4rem;
 }
-.AllItems > a:first-of-type {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
+.AllItems > span:first-of-type {
+  margin-bottom: 4rem;
   display: inline-block;
-  background-color: var(--main_color);
-  color: #fff;
-  padding: 0.6rem 2rem;
-  border-radius: 0.2rem;
+  font-size: 35px;
+  color: var(--main_color);
+  text-transform: capitalize;
   font-family: "DIN Next Arabic LIGHT";
+  font-weight: 600;
 }
 .AllItems .card {
   background-color: var(--body3_color);
@@ -831,7 +796,7 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
 .AllItems .more button:first-of-type {
   animation: moving 1s ease-in-out infinite alternate;
 }
-.AllItems .more button:last-of-type {
+.AllItems .more a {
   position: absolute;
   top: 50%;
   right: 0;
@@ -845,10 +810,9 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   color: #000;
 }
 @media (max-width: 1550px) {
-  .AllItems > a:first-of-type {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    padding: 0.4rem 2rem;
+  .AllItems > span:first-of-type {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
   }
   .AllItems {
     padding: 3rem;
@@ -871,14 +835,14 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
     margin: 1rem 0 1rem;
   }
 
-  .AllItems .more button:last-of-type {
+  .AllItems .more a {
     border-radius: 0.3rem;
     padding: 0.5rem 2rem;
   }
 }
 @media (max-width: 992px) {
-  .AllItems > a:first-of-type {
-    font-size: 1rem;
+  .AllItems > span:first-of-type {
+    font-size: 1.2rem;
     margin-bottom: 2rem;
   }
   .AllItems {
@@ -896,7 +860,7 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
     font-size: 0.8rem;
   }
 
-  .AllItems .more button:last-of-type {
+  .AllItems .more a {
     padding: 0.4rem 1rem;
   }
 }
@@ -972,19 +936,21 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   margin-right: 0.3rem;
   width: 0.9rem;
 }
-.blogs > div > button {
+.blogs > div > a {
   margin: 4rem auto 0rem;
   display: block;
   border: 1px solid #fff;
   background-color: #fff;
-  color: #000;
+  color: #000 !important;
   font-size: 1.2rem;
   padding: 0.5rem 1.5rem;
+  width: 10rem;
+  text-align: center;
   border-radius: 6rem;
   transition: all 0.3s ease-in-out;
 }
-.blogs > div > button:hover {
-  color: #fff;
+.blogs > div > a:hover {
+  color: #fff !important;
   background-color: var(--body_color);
 }
 @media (max-width: 1550px) {
@@ -1028,10 +994,9 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   .blogs > div > div > div:last-of-type div a img {
     width: 0.7rem;
   }
-  .blogs > div > button {
+  .blogs > div > a {
     margin: 2rem auto 0rem;
     font-size: 1rem;
-    border-radius: 4rem;
   }
 }
 @media (max-width: 992px) {
@@ -1065,8 +1030,10 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
     font-size: 0.9rem;
   }
 
-  .blogs > div > button {
-    margin: 1rem auto 0rem;
+  .blogs > div > a {
+    margin: 2rem auto 0rem;
+    font-size: 0.9rem;
+    padding: 0.3rem;
   }
 }
 @media (max-width: 576px) {
@@ -1114,6 +1081,23 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   border-radius: 2rem;
   padding: 4rem;
 }
+.FAQ > div > a {
+  margin: 4rem auto 0rem;
+  display: block;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000 !important;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  width: 10rem;
+  text-align: center;
+  border-radius: 6rem;
+  transition: all 0.3s ease-in-out;
+}
+.FAQ > div > a:hover {
+  color: #fff !important;
+  background-color: var(--body_color);
+}
 .FAQ > div .accordion-item {
   background-color: transparent;
   border: 2px solid grey;
@@ -1160,6 +1144,11 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+  .FAQ > div > a {
+    margin: 2rem auto 0rem;
+    font-size: 1rem;
+    border-radius: 4rem;
+  }
   .FAQ .title {
     font-size: 37px;
     margin-top: 4rem;
@@ -1198,6 +1187,11 @@ header .SecHeader > div.HeaderSwiper .swiperBtn button {
   .FAQ {
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+  .FAQ > div > a {
+    margin: 2rem auto 0rem;
+    font-size: 0.9rem;
+    padding: 0.3rem;
   }
   .FAQ .title {
     font-size: 32px;
@@ -1398,11 +1392,12 @@ footer .FstFooter > div > div > div:first-of-type p {
   padding-left: 5rem;
   font-family: "DIN Next Arabic LIGHT";
   line-height: 3rem;
+  margin-top: 1.5rem;
 }
 footer .FstFooter .listTitle {
   font-size: 28px;
   color: var(--main_color);
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 footer .FstFooter > div > div > div:nth-of-type(2) > div {
@@ -1478,17 +1473,23 @@ footer .SecFooter {
   text-align: center;
   font-size: 1.1rem;
 }
-
+footer .SecFooter > span {
+  color: var(--main_color);
+}
 @media (max-width: 1550px) {
   footer .FstFooter {
     padding: 3rem 0;
     margin-top: 3rem;
   }
-
+  footer .FstFooter > div > div > div:first-of-type img {
+    width: 16rem;
+    margin-top: 2rem;
+  }
   footer .FstFooter > div > div > div:first-of-type p {
     font-size: 17px;
     padding-left: 2rem;
     line-height: 2.5rem;
+    margin-top: 0.5rem;
   }
 
   footer .FstFooter .listTitle {
@@ -1501,7 +1502,7 @@ footer .SecFooter {
     margin-left: 0.5rem;
   }
   footer .FstFooter > div > div > div:nth-of-type(2) > div a svg {
-    width: 1.8rem;
+    width: 1.5rem;
   }
   footer .FstFooter > div > div > div:nth-of-type(3) ul li {
     margin-bottom: 0.7rem;
