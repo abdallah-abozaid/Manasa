@@ -112,6 +112,17 @@ a {
     -5px -5px 12px rgba(0, 0, 0, 0.03);
   border-radius: 0.5rem;
   margin: 3rem 0;
+  position: relative;
+}
+.back {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+}
+.back svg {
+  width: 2rem;
+  fill: var(--main_color);
 }
 .SignIn .smallImg1 {
   position: absolute;

@@ -178,12 +178,14 @@ input[type="number"] {
   justify-content: space-between;
   margin: 2rem 0;
 }
-.ConfirmEmail .ConfirmEmailForm .btns button {
+.ConfirmEmail .ConfirmEmailForm .btns button,
+.ConfirmEmail .ConfirmEmailForm .btns a {
   background-color: #f8fafb;
   border: none;
   padding: 0.7rem 2rem;
   border-radius: 0.2rem;
   font-size: 1.1rem;
+  color: #1e1e1e;
 }
 .ConfirmEmail .ConfirmEmailForm .btns button:last-of-type {
   background-color: var(--main_color);

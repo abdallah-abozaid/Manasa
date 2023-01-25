@@ -552,15 +552,14 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   text-align: center;
   padding: 4rem;
 }
-.AllItems > a:first-of-type {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
+.AllItems > span:first-of-type {
+  margin-bottom: 4rem;
   display: inline-block;
-  background-color: var(--main_color);
-  color: #fff;
-  padding: 0.6rem 2rem;
-  border-radius: 0.2rem;
+  font-size: 35px;
+  color: var(--main_color);
+  text-transform: capitalize;
   font-family: "DIN Next Arabic LIGHT";
+  font-weight: 600;
 }
 
 .AllItems .card {
@@ -625,24 +624,11 @@ header .FstHeader .navbar-nav > li:last-of-type img {
 .AllItems .more button:first-of-type {
   animation: moving 1s ease-in-out infinite alternate;
 }
-.AllItems .more button:last-of-type {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  border: 1px solid #fff;
-  border-radius: 0.4rem;
-  padding: 0.5rem 2.5rem;
-  transition: all 0.3s ease-in-out;
-}
-.AllItems .more button:last-of-type:hover {
-  background-color: #fff;
-  color: #000;
-}
+
 @media (max-width: 1550px) {
-  .AllItems > a:first-of-type {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    padding: 0.4rem 2rem;
+  .AllItems > span:first-of-type {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
   }
   .AllItems {
     padding: 3rem;
@@ -665,15 +651,10 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   .AllItems .more {
     margin: 1rem 0 1rem;
   }
-
-  .AllItems .more button:last-of-type {
-    border-radius: 0.3rem;
-    padding: 0.5rem 2rem;
-  }
 }
 @media (max-width: 992px) {
-  .AllItems > a:first-of-type {
-    font-size: 1rem;
+  .AllItems > span:first-of-type {
+    font-size: 1.2rem;
     margin-bottom: 2rem;
   }
   .AllItems {
@@ -689,10 +670,6 @@ header .FstHeader .navbar-nav > li:last-of-type img {
 
   .AllItems .card .card-body > div p {
     font-size: 0.8rem;
-  }
-
-  .AllItems .more button:last-of-type {
-    padding: 0.4rem 1rem;
   }
 }
 @media (max-width: 576px) {
