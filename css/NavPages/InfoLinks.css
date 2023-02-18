@@ -459,6 +459,18 @@ header .FstHeader .navbar-nav > li:last-of-type img {
     text-align: left;
   }
 }
+/* ----------------- */
+.ContactUs ul {
+  margin: 0;
+  padding: 0;
+}
+.ContactUs ul li {
+  margin-bottom: 0.7rem;
+}
+.ContactUs ul li img {
+  width: 1.4rem;
+  margin-left: 0.5rem;
+}
 /* --------------------------------------------------------------end main */
 
 /* -------------------------------------------------------------------start footer */

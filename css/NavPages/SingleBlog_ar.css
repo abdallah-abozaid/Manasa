@@ -403,93 +403,64 @@ header .FstHeader .navbar-nav > li:last-of-type img {
     width: 11rem;
   }
 }
-
 /* ------------------------------------------------------------end header */
 
 /* --------------------------------------------------------------start main */
-/* --------------------------------------------------------------start main */
-.keysImg {
-  margin: 5rem auto;
-  width: 70%;
+/* -------start Single-blog */
+.Single-blog {
+  margin-bottom: 5rem;
 }
-.btns {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 4rem;
+
+.Single-blog > div {
+  background-color: var(--body2_color);
+  border-radius: 2rem;
 }
-.btns button {
-  width: 20%;
-  border: 2px solid var(--main_color);
-  background-color: transparent;
-  font-size: 2rem;
-  padding: 0.6rem;
-  color: var(--main_color);
-  border-radius: 0.5rem;
+.Single-blog > div {
+  padding: 4rem;
 }
-.btns button.Active {
-  background-color: var(--main_color);
-  color: #fff;
+
+.Single-blog h1 {
+  margin-bottom: 2rem;
 }
-.InfoLinks .contant > div.Hide {
-  display: none !important;
+.Single-blog p {
+  font-size: 1.4rem;
+  font-family: "DIN Next Arabic LIGHT";
+  width: 100%;
 }
-.InfoLinks .contant > div {
-  font-size: 1.7rem;
-}
+
 @media (max-width: 1550px) {
-  .keysImg {
-    margin: 3rem auto;
-  }
-  .btns {
+  .Single-blog {
     margin-bottom: 2rem;
   }
-  .btns button {
-    font-size: 1.2rem;
+
+  .Single-blog > div {
+    padding: 2rem;
   }
 
-  .InfoLinks .contant > div {
+  .Single-blog p {
     font-size: 1.1rem;
   }
 }
 @media (max-width: 992px) {
-  .keysImg {
-    margin: 2rem auto;
+  .Single-blog {
+    margin-bottom: 1rem;
   }
 
-  .btns button {
-    font-size: 1rem;
-    width: 24%;
+  .Single-blog > div {
+    padding: 2rem;
   }
 
-  .InfoLinks .contant > div {
-    font-size: 1rem;
+  .Single-blog p {
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 576px) {
-  .keysImg {
-    width: 100%;
+  .Single-blog > div {
+    padding: 1rem;
   }
+}
+/* -------end Single-blog */
 
-  .btns button {
-    margin-bottom: 1rem;
-    width: 100%;
-    text-align: left;
-  }
-}
-/* ----------------- */
-.ContactUs ul {
-  margin: 0;
-  padding: 0;
-}
-.ContactUs ul li {
-  margin-bottom: 0.7rem;
-}
-.ContactUs ul li img {
-  width: 1.4rem;
-  margin-left: 0.5rem;
-}
 /* --------------------------------------------------------------end main */
 
 /* -------------------------------------------------------------------start footer */

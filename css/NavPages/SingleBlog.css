@@ -40,7 +40,6 @@ body {
 body {
   position: relative;
   background-color: var(--body_color);
-  direction: rtl;
 }
 
 section {
@@ -208,7 +207,7 @@ img {
   }
 }
 .dropdown .dropdown-item {
-  text-align: right;
+  text-align: left;
   color: grey !important;
   font-family: "DIN Next Arabic regular";
 }
@@ -227,7 +226,7 @@ header .FstHeader {
   padding-bottom: 1rem;
 }
 header .search input {
-  text-align: right;
+  text-align: left;
   padding: 0.65rem;
   border-radius: 0.3rem;
   outline: none;
@@ -237,7 +236,7 @@ header .search input {
   color: #fff;
   border: 1px solid grey;
   font-size: 1rem;
-  margin-right: 2rem;
+  margin-left: 2rem;
 }
 header .search input::placeholder {
   color: #ccc;
@@ -273,7 +272,7 @@ header .FstHeader .navbar-nav li a {
 header .FstHeader .navbar-nav li a > span {
   position: absolute;
   bottom: -0.3rem;
-  right: 0;
+  left: 0;
   width: 0%;
   height: 0.11rem;
   background-color: var(--main_color);
@@ -305,20 +304,18 @@ header .FstHeader .navbar-nav > li:last-of-type img {
 
 /* ------------------ */
 @media (max-width: 1550px) {
-  header .navbar-brand img {
-    width: 14rem;
-  }
   header .search input {
-    min-width: 6rem;
+    min-width: 9rem;
     padding: 0.4rem;
     font-size: 0.9rem;
   }
-
   header .FstHeader {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-
+  header .navbar-brand img {
+    width: 15rem;
+  }
   header .FstHeader {
     padding-top: 1rem;
   }
@@ -335,13 +332,11 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   }
 
   header .FstHeader .navbar-nav > li.Bayer > a {
-    min-width: 4rem;
+    min-width: 6rem;
   }
 }
+
 @media (max-width: 992px) {
-  header {
-    direction: rtl !important;
-  }
   header .navbar-brand img {
     width: 15rem;
   }
@@ -358,7 +353,6 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   header .navbar-nav {
     justify-content: flex-start;
     flex-wrap: wrap;
-    padding: 0;
   }
   header .FstHeader .navbar-nav li:nth-of-type(1),
   header .FstHeader .navbar-nav li:nth-of-type(2),
@@ -382,18 +376,6 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   header .FstHeader .navbar-nav li a {
     font-size: 1rem;
   }
-
-  header .outer {
-    width: 90%;
-  }
-
-  header .outer p {
-    font-size: 11px;
-  }
-  .swiper-pagination .swiper-pagination-bullet-active {
-    width: 0.8rem;
-    height: 0.8rem;
-  }
 }
 @media (max-width: 576px) {
   header .search input {
@@ -407,89 +389,61 @@ header .FstHeader .navbar-nav > li:last-of-type img {
 /* ------------------------------------------------------------end header */
 
 /* --------------------------------------------------------------start main */
-/* --------------------------------------------------------------start main */
-.keysImg {
-  margin: 5rem auto;
-  width: 70%;
+/* -------start Single-blog */
+.Single-blog {
+  margin-bottom: 5rem;
 }
-.btns {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 4rem;
+
+.Single-blog > div {
+  background-color: var(--body2_color);
+  border-radius: 2rem;
 }
-.btns button {
-  width: 20%;
-  border: 2px solid var(--main_color);
-  background-color: transparent;
-  font-size: 2rem;
-  padding: 0.6rem;
-  color: var(--main_color);
-  border-radius: 0.5rem;
+.Single-blog > div {
+  padding: 4rem;
 }
-.btns button.Active {
-  background-color: var(--main_color);
-  color: #fff;
+
+.Single-blog h1 {
+  margin-bottom: 2rem;
 }
-.InfoLinks .contant > div.Hide {
-  display: none !important;
+.Single-blog p {
+  font-size: 1.4rem;
+  font-family: "DIN Next Arabic LIGHT";
+  width: 100%;
 }
-.InfoLinks .contant > div {
-  font-size: 1.7rem;
-}
+
 @media (max-width: 1550px) {
-  .keysImg {
-    margin: 3rem auto;
-  }
-  .btns {
+  .Single-blog {
     margin-bottom: 2rem;
   }
-  .btns button {
-    font-size: 1.2rem;
+
+  .Single-blog > div {
+    padding: 2rem;
   }
 
-  .InfoLinks .contant > div {
+  .Single-blog p {
     font-size: 1.1rem;
   }
 }
 @media (max-width: 992px) {
-  .keysImg {
-    margin: 2rem auto;
+  .Single-blog {
+    margin-bottom: 1rem;
   }
 
-  .btns button {
-    font-size: 1rem;
-    width: 24%;
+  .Single-blog > div {
+    padding: 2rem;
   }
 
-  .InfoLinks .contant > div {
-    font-size: 1rem;
+  .Single-blog p {
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 576px) {
-  .keysImg {
-    width: 100%;
+  .Single-blog > div {
+    padding: 1rem;
   }
+}
+/* -------end Single-blog */
 
-  .btns button {
-    margin-bottom: 1rem;
-    width: 100%;
-    text-align: left;
-  }
-}
-/* ----------------- */
-.ContactUs ul {
-  margin: 0;
-  padding: 0;
-}
-.ContactUs ul li {
-  margin-bottom: 0.7rem;
-}
-.ContactUs ul li img {
-  width: 1.4rem;
-  margin-left: 0.5rem;
-}
 /* --------------------------------------------------------------end main */
 
 /* -------------------------------------------------------------------start footer */
@@ -503,7 +457,7 @@ footer .FstFooter img {
 }
 footer .FstFooter > div > div > div:first-of-type p {
   font-size: 26px;
-  padding-left: 5rem;
+  padding-right: 5rem;
   font-family: "DIN Next Arabic LIGHT";
   line-height: 3rem;
   margin-top: 1.5rem;
@@ -520,7 +474,7 @@ footer .FstFooter > div > div > div:nth-of-type(2) > div {
   justify-content: flex-start;
 }
 footer .FstFooter > div > div > div:nth-of-type(2) > div a {
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 footer .FstFooter > div > div > div:nth-of-type(2) > div a svg {
   transition: all 0.3s ease-in-out;
@@ -578,7 +532,7 @@ footer .FstFooter > div > div > div:nth-of-type(3) ul li {
   font-size: 20px;
 }
 footer .FstFooter > div > div > div:nth-of-type(3) ul li img {
-  margin-left: 0.6rem;
+  margin-right: 0.6rem;
 }
 
 footer .SecFooter {
@@ -601,7 +555,7 @@ footer .SecFooter > span {
   }
   footer .FstFooter > div > div > div:first-of-type p {
     font-size: 17px;
-    padding-left: 2rem;
+    padding-right: 2rem;
     line-height: 2.5rem;
     margin-top: 0.5rem;
   }
@@ -613,11 +567,12 @@ footer .SecFooter > span {
   }
 
   footer .FstFooter > div > div > div:nth-of-type(2) > div a {
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   footer .FstFooter > div > div > div:nth-of-type(2) > div a svg {
     width: 1.5rem;
   }
+
   footer .FstFooter > div > div > div:nth-of-type(3) ul li {
     margin-bottom: 0.7rem;
     font-size: 17px;
@@ -636,7 +591,7 @@ footer .SecFooter > span {
 
   footer .FstFooter > div > div > div:first-of-type p {
     font-size: 15px;
-    padding-left: 0rem;
+    padding-right: 0rem;
     line-height: 2rem;
   }
 
@@ -650,7 +605,7 @@ footer .SecFooter > span {
     font-size: 15px;
   }
   footer .FstFooter > div > div > div:nth-of-type(3) ul li img {
-    margin-left: 0.4rem;
+    margin-right: 0.4rem;
   }
 
   footer .SecFooter {
