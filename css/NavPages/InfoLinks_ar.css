@@ -665,3 +665,104 @@ footer .SecFooter > span {
 }
 
 /* -------------------------------------------------------------------end footer */
+/* -------start SimilarCompanies */
+
+.SimilarCompanies > span:first-of-type {
+  margin-bottom: 4rem;
+  display: inline-block;
+  font-size: 35px;
+  color: var(--main_color);
+  text-transform: capitalize;
+  font-family: "DIN Next Arabic LIGHT";
+  font-weight: 600;
+}
+.SimilarCompanies .card {
+  background-color: var(--body3_color);
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.SimilarCompanies .card .card-img-top {
+  position: relative;
+}
+.SimilarCompanies .card .card-img-top::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.3;
+}
+.SimilarCompanies .card:hover {
+  transform: scale(1.05);
+}
+.SimilarCompanies .card:hover .card-img-top::after {
+  opacity: 0;
+}
+.SimilarCompanies .card .card-body {
+  padding: 1rem 2rem;
+}
+.SimilarCompanies .card .card-body > p {
+  font-size: 25px;
+}
+.SimilarCompanies .card .card-body > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.SimilarCompanies .card .card-body > div p {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.SimilarCompanies .card .card-body > div p img {
+  width: auto;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 1550px) {
+  .SimilarCompanies > span:first-of-type {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .SimilarCompanies .card .card-body {
+    padding: 1rem 1rem;
+  }
+  .SimilarCompanies .card .card-body > p {
+    font-size: 18px;
+  }
+
+  .SimilarCompanies .card .card-body > div p {
+    font-size: 1rem;
+  }
+  .SimilarCompanies .card .card-body > div p img {
+    margin-left: 0.4rem;
+  }
+}
+@media (max-width: 992px) {
+  .SimilarCompanies > span:first-of-type {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .SimilarCompanies .card .card-body {
+    padding: 1rem 1rem;
+  }
+  .SimilarCompanies .card .card-body > p {
+    font-size: 15px;
+  }
+
+  .SimilarCompanies .card .card-body > div p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+}
+/* -------end SimilarCompanies */
