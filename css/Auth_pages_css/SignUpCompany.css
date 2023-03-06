@@ -221,37 +221,29 @@ a {
   right: 1rem;
   transform: translateY(-50%);
 }
-
-.SignUpCompany .SignUpCompanyForm .input.Categories button {
+.SignUpCompany .SignUpCompanyForm .input.Categories select {
+  background-color: #ffffff;
+  color: #1d2024;
   width: 100%;
-  height: 100%;
-  box-shadow: none;
+  border-radius: 0.2rem;
+  color: grey !important;
+  font-size: 20px;
+  padding: 0.5rem;
+  text-align: right;
+  border: 1px solid #ddd;
+}
+
+.SignUpCompany .SignUpCompanyForm .input.Categories select option {
+  padding: 0.8rem 1.5rem;
   text-align: left;
-}
-
-.SignUpCompany .SignUpCompanyForm .input.Categories button::after {
-  display: none;
-}
-.SignUpCompany .SignUpCompanyForm .input.Categories button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
-  width: 2rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../imges/arrowBottom.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-}
-
-.SignUpCompany .SignUpCompanyForm .input.Categories .dropdown-menu {
+  font-size: 20px;
   width: 100%;
+  color: grey;
+  box-shadow: none;
+  position: relative;
+  font-family: "DIN Next Arabic regular";
 }
+
 .SignUpCompany .SignUpCompanyForm > a {
   width: 100%;
   background-color: var(--main_color);
@@ -333,11 +325,14 @@ a {
     font-size: 0.9rem;
   }
 
-  .SignUpCompany .SignUpCompanyForm .input.Categories button::before {
-    width: 1rem;
-    background-size: 0.8rem;
+  .SignUpCompany .SignUpCompanyForm .input.Categories select {
+    padding: 0.6rem;
+    font-size: 1rem;
   }
-
+  .SignUpCompany .SignUpCompanyForm .input.Categories select option {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
   .SignUpCompany .SignUpCompanyForm > a {
     padding: 0.7rem;
     margin-top: 2rem;

@@ -236,44 +236,24 @@
             Search in Categories
           </p>
           <div>
-            <div class="dropdown" data-aos="zoom-in-left">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                id="dropdowncategroy"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                select categroy
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdowncategroy">
-                <li><a class="dropdown-item" href="#">All</a></li>
-                <li><a class="dropdown-item" href="#">categroy1</a></li>
-                <li><a class="dropdown-item" href="#">categroy2</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">categroy3</a>
-                </li>
-              </ul>
-            </div>
-            <div class="dropdown" data-aos="zoom-in-right">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                id="dropdownCity"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                select City
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownCity">
-                <li><a class="dropdown-item" href="#">All</a></li>
-                <li><a class="dropdown-item" href="#">City1</a></li>
-                <li><a class="dropdown-item" href="#">City2</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">City3</a>
-                </li>
-              </ul>
-            </div>
+            <select
+              name="categroy"
+              id="categroy-select"
+              data-aos="zoom-in-left"
+            >
+              <option value="" disabled>select categroy</option>
+              <option value="All">All</option>
+              <option value="categroy1">categroy1</option>
+              <option value="categroy2">categroy2</option>
+              <option value="categroy3">categroy3</option>
+            </select>
+            <select name="City" id="City-select" data-aos="zoom-in-right">
+              <option value="" disabled>select City</option>
+              <option value="All">All</option>
+              <option value="City1">City1</option>
+              <option value="City2">City2</option>
+              <option value="City3">City3</option>
+            </select>
           </div>
         </div>
       </section>

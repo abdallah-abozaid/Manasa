@@ -232,44 +232,28 @@
             Kategorilerde Ara
           </p>
           <div>
-            <div class="dropdown" data-aos="zoom-in-left">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                id="dropdowncategroy"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Kategori seç
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdowncategroy">
-                <li><a class="dropdown-item" href="#">Herşey</a></li>
-                <li><a class="dropdown-item" href="#">kategori1</a></li>
-                <li><a class="dropdown-item" href="#">kategori2</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">kategori3</a>
-                </li>
-              </ul>
-            </div>
-            <div class="dropdown" data-aos="zoom-in-right">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                id="dropdownCity"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                şehir seç
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownCity">
-                <li><a class="dropdown-item" href="#">Herşey</a></li>
-                <li><a class="dropdown-item" href="#">Şehir1</a></li>
-                <li><a class="dropdown-item" href="#">Şehir2</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Şehir3</a>
-                </li>
-              </ul>
-            </div>
+            <select
+              name="categroy"
+              id="categroy-select"
+              data-aos="zoom-in-left"
+            >
+              <option value="" disabled>Kategori seç</option>
+              <option value="Herşey">Herşey</option>
+              <option value="kategori1">kategori1</option>
+              <option value="kategori1">kategori1</option>
+              <option value="kategori1">kategori1</option>
+            </select>
+            <select
+              name="categroy"
+              id="categroy-select"
+              data-aos="zoom-in-right"
+            >
+              <option value="" disabled>şehir seç</option>
+              <option value="Herşey">Herşey</option>
+              <option value="Şehir1">Şehir1</option>
+              <option value="Şehir2">Şehir2</option>
+              <option value="Şehir3">Şehir3</option>
+            </select>
           </div>
         </div>
       </section>
