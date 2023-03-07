@@ -35,12 +35,30 @@
         <div class="input">
           <label>Enter 6 digits code</label>
           <div>
-            <input type="number" min="0" max="1" />
-            <input type="number" min="0" max="1" />
-            <input type="number" min="0" max="1" />
-            <input type="number" min="0" max="1" />
-            <input type="number" min="0" max="1" />
-            <input type="number" min="0" max="1" />
+            <input
+              type="number"
+              onKeyPress="if(this.value.length==1) return false;"
+            />
+            <input
+              type="number"
+              onKeyPress="if(this.value.length==1) return false;"
+            />
+            <input
+              type="number"
+              onKeyPress="if(this.value.length==1) return false;"
+            />
+            <input
+              type="number"
+              onKeyPress="if(this.value.length==1) return false;"
+            />
+            <input
+              type="number"
+              onKeyPress="if(this.value.length==1) return false;"
+            />
+            <input
+              type="number"
+              onKeyPress="if(this.value.length==1) return false;"
+            />
           </div>
         </div>
         <div class="btns">
@@ -54,6 +72,5 @@
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <!-- link animate css AOS library -->
     <script src="../../js/aos.js"></script>
-    <!-- Swiper JS -->
   </body>
 </html>
