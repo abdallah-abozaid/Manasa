@@ -100,7 +100,7 @@ img {
   }
 }
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
   border-radius: 0.5rem;
 }
 
@@ -220,27 +220,19 @@ img {
 /* -------------------------------------------------end stander */
 /* -------------------------------------------------start header */
 header {
-  background-color: #000;
+  width: 100%;
+
+  background-image: url(../imges/HeaderBack.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+header .container {
+  width: 100%;
+
+  position: relative;
 }
 header .FstHeader {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-header .search input {
-  text-align: right;
-  padding: 0.65rem;
-  border-radius: 0.3rem;
-  outline: none;
-  border: none;
-  min-width: 15rem;
-  background-color: var(--body_color);
-  color: #fff;
-  border: 1px solid grey;
-  font-size: 1rem;
-  margin-right: 2rem;
-}
-header .search input::placeholder {
-  color: #ccc;
+  padding-top: 1.5rem;
 }
 header .FstHeader .navbar-nav li.dropdown ul {
   padding: 0rem !important;
@@ -303,22 +295,143 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   width: auto;
 }
 
+header .SecHeader {
+  position: relative;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .SecHeader > div.HeaderSwiper {
+  overflow: hidden;
+  text-align: center;
+  direction: rtl;
+}
+header .SecHeader > div.HeaderSwiper .swiper-slide p {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-family: "DIN Next Arabic MEDIUM";
+}
+header .SecHeader > div.HeaderSwiper .swiper-slide p span {
+  color: var(--main_color);
+}
+header .search .dropdown-toggle::after {
+  display: none;
+}
+header .search {
+  margin-left: 2rem;
+  min-width: 15rem;
+  border-radius: 0.3rem;
+  border: 1px solid grey;
+}
+header .search .dropdown-menu {
+  background-color: #1d2024;
+  border: 1px solid #616161;
+  border-radius: 0.5rem;
+  max-height: 30rem;
+}
+header .search input {
+  text-align: right;
+  padding: 0.65rem;
+  outline: none;
+  width: 100%;
+  display: block;
+  background-color: var(--body_color);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+}
+header .search input::placeholder {
+  color: #ccc;
+}
+header .search .dropdown-menu {
+  width: 30vw;
+  left: -70%;
+}
+header .SecHeader .btns a {
+  background-color: var(--main_color);
+  padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+  margin: 0 0.6rem;
+  font-size: 25px;
+  margin-top: 1rem;
+  display: inline-block;
+  margin-bottom: 4rem;
+  font-family: "DIN Next Arabic LIGHT";
+}
+header .SecHeader .btns a:hover {
+  animation: wiggle 2s linear infinite;
+}
+header .SecHeader > div.HeaderSwiper .swiperBtn button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--main_color);
+  width: 4rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+header .SecHeader > div.HeaderSwiper .swiperBtn button::after {
+  display: none;
+}
+header .SecHeader > div.HeaderSwiper .swiperBtn button.swiper-button-prev1 {
+  right: 0;
+}
+header .SecHeader > div.HeaderSwiper .swiperBtn button.swiper-button-next1 {
+  left: 0;
+}
+header .SecHeader > div.HeaderSwiper .swiperBtn button img {
+  width: auto;
+}
+header .outer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+header .outer p {
+  font-size: 25px;
+}
+.swiper-pagination {
+  position: relative !important;
+  width: unset !important;
+}
+.swiper-pagination span {
+  width: 0.8rem;
+  display: block;
+  margin: auto !important;
+  margin-bottom: 0.7rem !important;
+  height: 0.8rem;
+  opacity: 1;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--main_color);
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* for language swiper */
+header .SecHeader > div.HeaderSwiper .swiperBtn button {
+  transform: rotate(180deg);
+}
 /* ------------------ */
 @media (max-width: 1550px) {
   header .navbar-brand img {
     width: 14rem;
   }
+  header .search {
+    min-width: 9rem;
+  }
   header .search input {
-    min-width: 6rem;
     padding: 0.4rem;
     font-size: 0.9rem;
   }
-
-  header .FstHeader {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
   header .FstHeader {
     padding-top: 1rem;
   }
@@ -335,11 +448,43 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   }
 
   header .FstHeader .navbar-nav > li.Bayer > a {
-    min-width: 4rem;
+    min-width: 5rem;
+  }
+
+  header .SecHeader > div.HeaderSwiper .swiper-slide p {
+    font-size: 35px;
+    line-height: 4rem;
+  }
+
+  header .SecHeader .btns a {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  header .SecHeader > div.HeaderSwiper .swiperBtn button {
+    width: 3rem;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+  }
+
+  header .outer p {
+    font-size: 18px;
+  }
+  header .SecHeader {
+    height: 80%;
+  }
+  .swiper-pagination span {
+    width: 0.7rem;
+    margin-bottom: 0.5rem !important;
+    height: 0.7rem;
+  }
+  .swiper-pagination .swiper-pagination-bullet-active {
+    width: 1rem;
+    height: 1rem;
   }
 }
 @media (max-width: 992px) {
-  header {
+  .FstHeader {
     direction: rtl !important;
   }
   header .navbar-brand img {
@@ -347,12 +492,20 @@ header .FstHeader .navbar-nav > li:last-of-type img {
   }
   header .search input {
     margin: 0;
-    width: 50%;
+    width: 100%;
+  }
+  header .search .dropdown-menu {
+    position: absolute !important;
+    left: 0;
+    width: 90vw;
   }
   header .container,
   header {
     height: auto !important;
     background-size: 100% 100%;
+  }
+  header .SecHeader {
+    height: auto;
   }
 
   header .navbar-nav {
@@ -383,6 +536,27 @@ header .FstHeader .navbar-nav > li:last-of-type img {
     font-size: 1rem;
   }
 
+  header .SecHeader > div.HeaderSwiper .swiper-slide p {
+    font-size: 35px;
+    line-height: 2.2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 4rem;
+  }
+  header .SecHeader > div.HeaderSwiper .swiper-slide p span.smallSize {
+    font-size: 30px;
+  }
+  header .SecHeader .btns {
+    display: block;
+    margin-bottom: 8rem;
+  }
+  header .SecHeader .btns a {
+    font-size: 0.95rem;
+    margin: 0.5rem auto;
+    width: auto;
+  }
+  header .SecHeader > div.HeaderSwiper .swiperBtn button {
+    width: 2rem;
+  }
   header .outer {
     width: 90%;
   }
@@ -397,10 +571,22 @@ header .FstHeader .navbar-nav > li:last-of-type img {
 }
 @media (max-width: 576px) {
   header .search input {
-    width: 90%;
+    width: 100%;
   }
   header .navbar-brand img {
     width: 11rem;
+  }
+
+  header .SecHeader > div.HeaderSwiper .swiper-slide p {
+    font-size: 22px;
+    margin-top: 3rem;
+  }
+  header .SecHeader > div.HeaderSwiper .swiper-slide p span.smallSize {
+    font-size: 20px;
+  }
+  header .SecHeader .btns {
+    display: block;
+    margin-bottom: 5rem;
   }
 }
 /* ------------------------------------------------------------end header */
